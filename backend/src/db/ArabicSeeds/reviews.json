@@ -1,0 +1,272 @@
+[
+  {
+    "client_email": "ahmed.alkhatib@email.com",
+    "agent_email": "sara.almansouri@estatearabia.com",
+    "property_title": "شقة فاخرة بغرفتي نوم مع إطلالة على برج القاهرة",
+    "rating": 5,
+    "comment": "الشقة في وسط البلد كانت أجمل من الصور بكثير. الوكيل تعامل بشكل احترافي جداً وجعل عملية الانتقال سهلة جداً!",
+    "created_at": "2025-10-26T12:00:00",
+    "updated_at": "2025-10-26T12:00:00"
+  },
+  {
+    "client_email": "layan.alotaibi@email.com",
+    "agent_email": "reem.alzahrani@estatearabia.com",
+    "property_title": "فيلا أنيقة بثلاث غرف نوم في الزمالك",
+    "rating": 1,
+    "comment": "تجربة سيئة جداً. الوكيل كان يؤخر الرد باستمرار، والعقار في الزمالك لم يكن كما هو موصوف على الإطلاق.",
+    "created_at": "2025-10-24T14:30:00",
+    "updated_at": "2025-10-24T14:30:00"
+  },
+  {
+    "client_email": "salman.abdullah@email.com",
+    "agent_email": "noura.alharbi@estatearabia.com",
+    "property_title": "شقة كلاسيكية بطراز مغربي في البلد القديم",
+    "rating": 3,
+    "comment": "الشقة في البلد القديم كانت جيدة لكن السعر أعلى قليلاً من قيمتها. الموقع كان لطيفاً لكن.",
+    "created_at": "2025-10-22T10:15:00",
+    "updated_at": "2025-10-22T10:15:00"
+  },
+  {
+    "client_email": "salman.abdullah@email.com",
+    "agent_email": "khaled.alotaibi@estatearabia.com",
+    "property_title": "استوديو أنيق بالقرب من ميدان التحرير",
+    "rating": 5,
+    "comment": "خدمة ممتازة جداً! وجدت استوديو رائعاً بالقرب من محطة المترو في يومين فقط. الوكيل تحدث بطلاقة وكان صبوراً جداً.",
+    "created_at": "2025-10-23T11:45:00",
+    "updated_at": "2025-10-23T11:45:00"
+  },
+  {
+    "client_email": "joud.alharbi@email.com",
+    "agent_email": "sara.almansouri@estatearabia.com",
+    "property_title": "شقة ثنائية حديثة بالمعادي",
+    "rating": 4,
+    "comment": "العقار في المعادي كان واسعاً ونظيفاً جداً. المشكلة الوحيدة كانت تأخير في توقيع العقد، لكن بشكل عام كانت تجربة رائعة.",
+    "created_at": "2025-10-25T16:20:00",
+    "updated_at": "2025-10-25T16:20:00"
+  },
+  {
+    "client_email": "reemas.alzaidi@email.com",
+    "agent_email": "yasser.almasri@estatearabia.com",
+    "property_title": "فيلا فاخرة على الشاطئ مع مسبح خاص",
+    "rating": 4,
+    "comment": "أحببت الفيلا في جدة كثيراً. الإعلان كان دقيقاً جداً، والفريق ساعدنا في الحصول على صفقة رائعة. سأنصح به بالتأكيد!",
+    "created_at": "2025-10-22T09:30:00",
+    "updated_at": "2025-10-22T09:30:00"
+  },
+  {
+    "client_email": "ahmed.alkhatib@email.com",
+    "agent_email": "noura.alharbi@estatearabia.com",
+    "property_title": "شقة عصرية بالقرب من حديقة الأزهر",
+    "rating": 2,
+    "comment": "صور الشقة بدت رائعة، لكن المكان الفعلي في حديقة الأزهر لم يكن مصيانة جيداً. الوكيل حاول إصلاحه لكن تأخر كثيراً.",
+    "created_at": "2025-10-22T13:00:00",
+    "updated_at": "2025-10-22T13:00:00"
+  },
+  {
+    "client_email": "joud.alharbi@email.com",
+    "agent_email": "sara.almansouri@estatearabia.com",
+    "property_title": "شقة ثنائية حديثة بالمعادي",
+    "rating": 5,
+    "comment": "تواصل وتعاون ممتازين. الوكيل في المعادي فهم احتياجاتنا تماماً وقدم لنا ما نريده بشكل مثالي.",
+    "created_at": "2025-10-25T17:15:00",
+    "updated_at": "2025-10-25T17:15:00"
+  },
+  {
+    "client_email": "fahad.almasri@email.com",
+    "agent_email": "reem.alzahrani@estatearabia.com",
+    "property_title": "بنتهاوس فاخر مع إطلالة على النيل",
+    "rating": 3,
+    "comment": "الشقة في الزمالك كانت لطيفة لكن عملية العقد كانت مربكة. فريق الدعم كان بطيء الرد.",
+    "created_at": "2025-10-26T11:00:00",
+    "updated_at": "2025-10-26T11:00:00"
+  },
+  {
+    "client_email": "ahmed.alkhatib@email.com",
+    "agent_email": "noura.alharbi@estatearabia.com",
+    "property_title": "شقة كلاسيكية بطراز مغربي في البلد القديم",
+    "rating": 4,
+    "comment": "عائلتي أحبت الشقة في البلد القديم. الحي فيه أجواء تاريخية وهادئة. الوكيل كان لطيفاً جداً وصبوراً.",
+    "created_at": "2025-10-22T10:45:00",
+    "updated_at": "2025-10-22T10:45:00"
+  },
+  {
+    "client_email": "reemas.alzaidi@email.com",
+    "agent_email": "yasser.almasri@estatearabia.com",
+    "property_title": "فيلا فاخرة على الشاطئ مع مسبح خاص",
+    "rating": 5,
+    "comment": "بصراحة أفضل تجربة إيجار لدي. العقار في جدة كان نظيفاً جداً، والفريق تابع معنا حتى بعد الانتقال. خمس نجوم بلا تردد!",
+    "created_at": "2025-10-22T10:00:00",
+    "updated_at": "2025-10-22T10:00:00"
+  },
+  {
+    "client_email": "joud.alharbi@email.com",
+    "agent_email": "reem.alzahrani@estatearabia.com",
+    "property_title": "فيلا أنيقة بثلاث غرف نوم في الزمالك",
+    "rating": 1,
+    "comment": "أسوأ تجربة. حجزت عرض في الزمالك لكن الوكيل لم يظهر أبداً. غير احترافي تماماً.",
+    "created_at": "2025-10-25T14:00:00",
+    "updated_at": "2025-10-25T14:00:00"
+  },
+  {
+    "client_email": "layan.alotaibi@email.com",
+    "agent_email": "sara.almansouri@estatearabia.com",
+    "property_title": "شقة فاخرة بغرفتي نوم مع إطلالة على برج القاهرة",
+    "rating": 4,
+    "comment": "فريق رائع جداً. الوكيل في وسط البلد ساعدنا نجد شقة قريبة من العمل وحتى فاوض على إيجار أفضل لنا.",
+    "created_at": "2025-10-26T13:30:00",
+    "updated_at": "2025-10-26T13:30:00"
+  },
+  {
+    "client_email": "fahad.almasri@email.com",
+    "agent_email": "khaled.alotaibi@estatearabia.com",
+    "property_title": "استوديو أنيق بالقرب من ميدان التحرير",
+    "rating": 3,
+    "comment": "تجربة لائقة بشكل عام. العقار كان جيداً لكن استغرق وقتاً طويلاً لتأكيد التوفر.",
+    "created_at": "2025-10-23T12:00:00",
+    "updated_at": "2025-10-23T12:00:00"
+  },
+  {
+    "client_email": "salman.abdullah@email.com",
+    "agent_email": "khaled.alotaibi@estatearabia.com",
+    "property_title": "مساحة مكتبية مع إطلالة على الأفق",
+    "rating": 5,
+    "comment": "رائع جداً! وجدت مساحة مكتبية حديثة ضمن الميزانية. العملية الإلكترونية كانت سهلة وشفافة.",
+    "created_at": "2025-10-23T11:30:00",
+    "updated_at": "2025-10-23T11:30:00"
+  },
+  {
+    "client_email": "reemas.alzaidi@email.com",
+    "agent_email": "sara.almansouri@estatearabia.com",
+    "property_title": "شقة ثنائية حديثة بالمعادي",
+    "rating": 5,
+    "comment": "سعيد جداً بمنزلنا الجديد في المعادي. الوكيل كان ودوداً وصادقاً حول كل التفاصيل. تجربة سلسة تماماً!",
+    "created_at": "2025-10-25T16:00:00",
+    "updated_at": "2025-10-25T16:00:00"
+  },
+  {
+    "client_email": "layan.alotaibi@email.com",
+    "agent_email": "noura.alharbi@estatearabia.com",
+    "property_title": "مستودع بالقرب من كورنيش النيل",
+    "rating": 2,
+    "comment": "المستودع في كورنيش النيل لم يطابق الوصف. الموقع كان رائعاً لكن المساحة كانت أصغر من المعلن عنها.",
+    "created_at": "2025-10-24T09:15:00",
+    "updated_at": "2025-10-24T09:15:00"
+  },
+  {
+    "client_email": "fahad.almasri@email.com",
+    "agent_email": "reem.alzahrani@estatearabia.com",
+    "property_title": "فيلا أنيقة بثلاث غرف نوم في الزمالك",
+    "rating": 5,
+    "comment": "أنصح بهذا الموقع بشدة! الوكيل في الزمالك ذهب أبعد من المتوقع، حتى ساعدنا في توصيل الأثاث.",
+    "created_at": "2025-10-24T12:45:00",
+    "updated_at": "2025-10-24T12:45:00"
+  },
+  {
+    "client_email": "reemas.alzaidi@email.com",
+    "agent_email": "yasser.almasri@estatearabia.com",
+    "property_title": "فيلا فاخرة على الشاطئ مع مسبح خاص",
+    "rating": 4,
+    "comment": "تجربة لطيفة في الإيجار في جدة. الإعلان كان دقيقاً تماماً وفريق الدعم كان متاحاً حتى في نهاية الأسبوع.",
+    "created_at": "2025-10-22T10:30:00",
+    "updated_at": "2025-10-22T10:30:00"
+  },
+  {
+    "client_email": "ahmed.alkhatib@email.com",
+    "agent_email": "khaled.alotaibi@estatearabia.com",
+    "property_title": null,
+    "rating": 1,
+    "comment": "الموقع كان يتعطل باستمرار ولم أستطع التواصل مع أحد للمساعدة. انتهى بي الحال بالعثور على عقار في مكان آخر.",
+    "created_at": "2025-10-20T15:00:00",
+    "updated_at": "2025-10-20T15:00:00"
+  },
+  {
+    "client_email": "layan.alotaibi@email.com",
+    "agent_email": "sara.almansouri@estatearabia.com",
+    "property_title": "شقة فاخرة بغرفتي نوم مع إطلالة على برج القاهرة",
+    "rating": 5,
+    "comment": "أحببت الشقة الفاخرة في وسط البلد. الوكيل كان في الموعد وكان مؤدباً واحترافياً جداً!",
+    "created_at": "2025-10-26T14:00:00",
+    "updated_at": "2025-10-26T14:00:00"
+  },
+  {
+    "client_email": "salman.abdullah@email.com",
+    "agent_email": "noura.alharbi@estatearabia.com",
+    "property_title": "شقة كلاسيكية بطراز مغربي في البلد القديم",
+    "rating": 3,
+    "comment": "العقار كان جيداً لكن ليس بقيمة السعر. الوكيل كان مؤدباً لكن لم يبدو أنه ملم بالأمور جيداً.",
+    "created_at": "2025-10-22T11:00:00",
+    "updated_at": "2025-10-22T11:00:00"
+  },
+  {
+    "client_email": "joud.alharbi@email.com",
+    "agent_email": "khaled.alotaibi@estatearabia.com",
+    "property_title": "استوديو أنيق بالقرب من ميدان التحرير",
+    "rating": 4,
+    "comment": "تجربة جيدة بشكل عام. وجدت استوديو صغير بالقرب من محطة المترو يناسب احتياجاتي تماماً.",
+    "created_at": "2025-10-23T10:30:00",
+    "updated_at": "2025-10-23T10:30:00"
+  },
+  {
+    "client_email": "fahad.almasri@email.com",
+    "agent_email": "noura.alharbi@estatearabia.com",
+    "property_title": "شقة كلاسيكية بطراز مغربي في البلد القديم",
+    "rating": 2,
+    "comment": "التواصل مع الوكيل كان بطيئاً، واضطررت للمتابعة عدة مرات للحصول على معلومات. العقار في البلد القديم كان جيداً لكن.",
+    "created_at": "2025-10-22T14:00:00",
+    "updated_at": "2025-10-22T14:00:00"
+  },
+  {
+    "client_email": "reemas.alzaidi@email.com",
+    "agent_email": "yasser.almasri@estatearabia.com",
+    "property_title": "فيلا فاخرة على الشاطئ مع مسبح خاص",
+    "rating": 5,
+    "comment": "قائمة العقار في جدة كانت مثالية لإجازتنا. الرد السريع والأسعار الشفافة. أنصح به بشدة!",
+    "created_at": "2025-10-22T08:45:00",
+    "updated_at": "2025-10-22T08:45:00"
+  },
+  {
+    "client_email": "joud.alharbi@email.com",
+    "agent_email": "sara.almansouri@estatearabia.com",
+    "property_title": "شقة فاخرة بغرفتي نوم مع إطلالة على برج القاهرة",
+    "rating": 4,
+    "comment": "الوكيل في وسط البلد كان احترافياً جداً وأعطانا نصائح رائعة عن الأحياء. الشقة كانت تحتوي على كل ما نحتاجه.",
+    "created_at": "2025-10-26T15:30:00",
+    "updated_at": "2025-10-26T15:30:00"
+  },
+  {
+    "client_email": "ahmed.alkhatib@email.com",
+    "agent_email": "yasser.almasri@estatearabia.com",
+    "property_title": null,
+    "rating": 1,
+    "comment": "لن أستخدم هذه المنصة مرة أخرى. الإعلان في جدة كان وهماً، والوكيل توقف عن الرد بعد أخذ العربون.",
+    "created_at": "2025-10-20T16:00:00",
+    "updated_at": "2025-10-20T16:00:00"
+  },
+  {
+    "client_email": "salman.abdullah@email.com",
+    "agent_email": "khaled.alotaibi@estatearabia.com",
+    "property_title": "مساحة مكتبية مع إطلالة على الأفق",
+    "rating": 5,
+    "comment": "دعم عملاء رائع جداً! الوكيل ساعدني على فهم جميع مستندات العقد بالعربية. مفيد جداً!",
+    "created_at": "2025-10-23T11:15:00",
+    "updated_at": "2025-10-23T11:15:00"
+  },
+  {
+    "client_email": "fahad.almasri@email.com",
+    "agent_email": "reem.alzahrani@estatearabia.com",
+    "property_title": "بنتهاوس فاخر مع إطلالة على النيل",
+    "rating": 4,
+    "comment": "تجربة مستخدم جيدة. الموقع جعل البحث والحجز سهلاً. شقتي الجديدة في الزمالك رائعة!",
+    "created_at": "2025-10-26T10:00:00",
+    "updated_at": "2025-10-26T10:00:00"
+  },
+  {
+    "client_email": "reemas.alzaidi@email.com",
+    "agent_email": "reem.alzahrani@estatearabia.com",
+    "property_title": "فيلا أنيقة بثلاث غرف نوم في الزمالك",
+    "rating": 5,
+    "comment": "خدمة رائعة! العقار في الزمالك كان تماماً ما كنا نأمل به، والوكيل تابع معنا بعد الانتقال. عناية واهتمام رائع جداً!",
+    "created_at": "2025-10-24T13:00:00",
+    "updated_at": "2025-10-24T13:00:00"
+  }
+]

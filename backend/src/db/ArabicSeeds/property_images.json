@@ -1,0 +1,182 @@
+[
+  {
+    "property_title": "شقة فاخرة بغرفتي نوم مع إطلالة على برج القاهرة",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760977272/pexels-ian-panelo-3460599_ane1z1.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "غرفة معيشة فاخرة بإطلالة بانورامية على المدينة وتصميم داخلي أنيق يمنح شعوراً بالراحة والفخامة.",
+    "created_at": "2025-10-20T10:15:30Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "شقة فاخرة بغرفتي نوم مع إطلالة على برج القاهرة",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760977266/pexels-heyho-7214173_kfed08.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "غرفة نوم واسعة بإضاءة طبيعية وأثاث عصري يجمع بين الأناقة والراحة.",
+    "created_at": "2025-10-20T10:15:30Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "استوديو أنيق بالقرب من ميدان التحرير",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979189/pexels-heyho-6934183_wyai5g.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "شقة استوديو أنيقة بتصميم مفتوح ولمسات عصرية تناسب أسلوب الحياة الحديث.",
+    "created_at": "2025-10-20T10:16:05Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "استوديو أنيق بالقرب من ميدان التحرير",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979180/pexels-heyho-6538932_jquub3.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "منطقة معيشة صغيرة ولكن أنيقة تجمع بين الراحة والتوفير في المساحة.",
+    "created_at": "2025-10-20T10:16:05Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "فيلا أنيقة بثلاث غرف نوم في الزمالك",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979423/pexels-belinda-rubio-262053566-29262651_iqnjis.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "فيلا أنيقة بثلاث غرف وحديقة صغيرة توفر بيئة هادئة ومريحة للعائلة.",
+    "created_at": "2025-10-20T10:16:45Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "فيلا أنيقة بثلاث غرف نوم في الزمالك",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979429/pexels-furkan-tumer-1560109-8417307_ppkauq.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "تصميم داخلي يجمع بين الأناقة والبساطة مع نوافذ كبيرة تسمح بدخول الضوء الطبيعي.",
+    "created_at": "2025-10-20T10:16:45Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "فيلا فاخرة على الشاطئ مع مسبح خاص",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979685/pexels-freestockpro-30163983_lqvoek.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "فيلا فاخرة على الشاطئ مع مسبح خاص وإطلالة ساحرة على البحر.",
+    "created_at": "2025-10-20T10:17:20Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "فيلا فاخرة على الشاطئ مع مسبح خاص",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979676/pexels-asadphoto-12720684_vk1a2t.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "تصميم مفتوح يدمج بين المساحات الداخلية والخارجية مع تراس واسع يطل على البحر.",
+    "created_at": "2025-10-20T10:17:20Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "شقة كلاسيكية بطراز مغربي في البلد القديم",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980055/pexels-ftmglgkhn-34340612_orkgpl.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "شقة بطراز مغربي تقليدي تجمع بين الزخارف الفنية والألوان الدافئة.",
+    "created_at": "2025-10-20T10:18:00Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "شقة كلاسيكية بطراز مغربي في البلد القديم",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980057/pexels-laloortiz-30396988_fldrew.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "تفاصيل معمارية مميزة بأقواس ونقوش تقليدية تضيف لمسة تاريخية فريدة.",
+    "created_at": "2025-10-20T10:18:00Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "شقة ثنائية حديثة بالمعادي",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980226/pexels-pu-ca-adryan-163345030-28729467_tnwyzy.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "شقة حديثة بتصميم ثنائي في قلب المعادي، تتميز بالمساحات المفتوحة والإضاءة الطبيعية.",
+    "created_at": "2025-10-20T10:18:40Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "شقة ثنائية حديثة بالمعادي",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980235/pexels-falling4utah-1080721_p6z6pv.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "مطبخ أنيق مجهز بالكامل بأحدث الأجهزة وتصميم بسيط يلائم الطابع العصري.",
+    "created_at": "2025-10-20T10:18:40Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "مساحة مكتبية مع إطلالة على الأفق",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980513/pexels-pixabay-221537_1_i3nrfh.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "مساحة مكتبية بإطلالة رائعة على النيل توفر بيئة عمل مريحة ومحفزة للإنتاجية.",
+    "created_at": "2025-10-20T10:19:10Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "مساحة مكتبية مع إطلالة على الأفق",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980517/pexels-seven11nash-380768_fbkbpl.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "تصميم داخلي بسيط ومضيء مثالي للشركات الناشئة أو المكاتب الإبداعية.",
+    "created_at": "2025-10-20T10:19:10Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "بنتهاوس فاخر مع إطلالة على النيل",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980967/pexels-madbyte-36362_ugdnqx.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "بنتهاوس فاخر يتميز بإطلالة بانورامية وتراس خاص يطل على أفق المدينة.",
+    "created_at": "2025-10-20T10:19:45Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "بنتهاوس فاخر مع إطلالة على النيل",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980968/pexels-aakash-poly-1648893097-27675673_uzekus.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "تصميم داخلي فاخر مع أرضيات رخامية ونوافذ تمتد من الأرض حتى السقف.",
+    "created_at": "2025-10-20T10:19:45Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "شقة عصرية بالقرب من حديقة الأزهر",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760981218/pexels-allen-boguslavsky-1344061-34365797_c2d1sm.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "شقة عصرية بتصميم بسيط وديكور أنيق يركز على التفاصيل الحديثة.",
+    "created_at": "2025-10-20T10:20:15Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "شقة عصرية بالقرب من حديقة الأزهر",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760981220/pexels-lamiko-3754699_r55yqi.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "غرفة معيشة مشرقة مع شرفة صغيرة تطل على الشارع الرئيسي.",
+    "created_at": "2025-10-20T10:20:15Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "مستودع بالقرب من كورنيش النيل",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760981382/pexels-pixabay-209251_mcgmwm.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "مستودع واسع مناسب للتخزين الصناعي أو التجاري مع سهولة الوصول للشاحنات.",
+    "created_at": "2025-10-20T10:20:45Z",
+    "lang": "ar"
+  },
+  {
+    "property_title": "مستودع بالقرب من كورنيش النيل",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760981382/pexels-pixabay-257636_irgcgv.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "مساحة داخلية مرتفعة السقف تسمح بتخزين البضائع الكبيرة بسهولة.",
+    "created_at": "2025-10-20T10:20:45Z",
+    "lang": "ar"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "property_title": "Luxury 2-Bed Apartment with Burj Khalifa View",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760977272/pexels-ian-panelo-3460599_ane1z1.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "Elegant living room with panoramic Burj Khalifa views and modern interior design offering both comfort and luxury.",
+    "created_at": "2025-10-20T10:15:30Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Luxury 2-Bed Apartment with Burj Khalifa View",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760977266/pexels-heyho-7214173_kfed08.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "Spacious bedroom with natural light and contemporary furniture combining elegance and coziness.",
+    "created_at": "2025-10-20T10:15:30Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Charming Studio Near Shibuya Crossing",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979189/pexels-heyho-6934183_wyai5g.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "Stylish open-plan studio near Shibuya Crossing with modern touches and efficient layout.",
+    "created_at": "2025-10-20T10:16:05Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Charming Studio Near Shibuya Crossing",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979180/pexels-heyho-6538932_jquub3.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "Compact yet elegant living area maximizing comfort and space efficiency.",
+    "created_at": "2025-10-20T10:16:05Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Elegant 3-Bedroom Villa in Zamalek",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979423/pexels-belinda-rubio-262053566-29262651_iqnjis.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "Charming townhouse with a peaceful garden, ideal for families seeking comfort and elegance in Zamalek.",
+    "created_at": "2025-10-20T10:16:45Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Elegant 3-Bedroom Villa in Zamalek",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979429/pexels-furkan-tumer-1560109-8417307_ppkauq.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "Bright interior blending simplicity and elegance with large windows overlooking the Nile.",
+    "created_at": "2025-10-20T10:16:45Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Beachfront Villa with Private Pool",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979685/pexels-freestockpro-30163983_lqvoek.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "Beachfront villa with private pool and breathtaking ocean view in Bondi Beach.",
+    "created_at": "2025-10-20T10:17:20Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Beachfront Villa with Private Pool",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760979676/pexels-asadphoto-12720684_vk1a2t.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "Open-concept design blending indoor and outdoor spaces with a wide sea-view terrace.",
+    "created_at": "2025-10-20T10:17:20Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Classic Parisian Apartment in Montmartre",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980055/pexels-ftmglgkhn-34340612_orkgpl.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "Classic Parisian living room featuring warm tones and artistic vintage decor.",
+    "created_at": "2025-10-20T10:18:00Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Classic Parisian Apartment in Montmartre",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980057/pexels-laloortiz-30396988_fldrew.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "Beautiful architectural details with arches and wooden beams adding a timeless charm.",
+    "created_at": "2025-10-20T10:18:00Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Modern Duplex in Midtown Manhattan",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980226/pexels-pu-ca-adryan-163345030-28729467_tnwyzy.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "Modern duplex with bright open spaces and panoramic Manhattan skyline views.",
+    "created_at": "2025-10-20T10:18:40Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Modern Duplex in Midtown Manhattan",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980235/pexels-falling4utah-1080721_p6z6pv.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "Sleek kitchen equipped with top-tier appliances and minimalist modern style.",
+    "created_at": "2025-10-20T10:18:40Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Office Space with Skyline View",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980513/pexels-pixabay-221537_1_i3nrfh.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "Office space with stunning skyline view offering a productive and inspiring work environment.",
+    "created_at": "2025-10-20T10:19:10Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Office Space with Skyline View",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980517/pexels-seven11nash-380768_fbkbpl.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "Bright and minimal interior, perfect for creative startups or small teams.",
+    "created_at": "2025-10-20T10:19:10Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Chic Penthouse Overlooking the Seine",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980967/pexels-madbyte-36362_ugdnqx.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "Luxurious penthouse with panoramic terraces overlooking the Eiffel Tower and the Seine.",
+    "created_at": "2025-10-20T10:19:45Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Chic Penthouse Overlooking the Seine",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760980968/pexels-aakash-poly-1648893097-27675673_uzekus.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "Sophisticated interior with marble floors and floor-to-ceiling glass walls.",
+    "created_at": "2025-10-20T10:19:45Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Contemporary Apartment Near Central Park",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760981218/pexels-allen-boguslavsky-1344061-34365797_c2d1sm.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "Contemporary apartment near Central Park with clean modern design and relaxing atmosphere.",
+    "created_at": "2025-10-20T10:20:15Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Contemporary Apartment Near Central Park",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760981220/pexels-lamiko-3754699_r55yqi.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "Bright living space with balcony overlooking the quiet Manhattan streets.",
+    "created_at": "2025-10-20T10:20:15Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Warehouse Space Near Cairo Downtown",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760981382/pexels-pixabay-209251_mcgmwm.jpg",
+    "is_primary": true,
+    "display_order": 1,
+    "caption": "Spacious warehouse ideal for industrial or commercial storage with truck access.",
+    "created_at": "2025-10-20T10:20:45Z",
+    "lang": "en"
+  },
+  {
+    "property_title": "Warehouse Space Near Cairo Downtown",
+    "image_url": "https://res.cloudinary.com/drekzx0z5/image/upload/v1760981382/pexels-pixabay-257636_irgcgv.jpg",
+    "is_primary": false,
+    "display_order": 2,
+    "caption": "High-ceiling interior allowing easy storage for large-scale goods and materials.",
+    "created_at": "2025-10-20T10:20:45Z",
+    "lang": "en"
+  }
+]

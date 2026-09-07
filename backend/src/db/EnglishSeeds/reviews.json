@@ -1,0 +1,272 @@
+[
+  {
+    "client_email": "john.williams@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "property_title": "Luxury 2-Bed Apartment with Burj Khalifa View",
+    "rating": 5,
+    "comment": "The apartment in Downtown Dubai was even better than the photos. Our agent handled everything professionally and made the move-in process effortless!",
+    "created_at": "2025-10-26T12:00:00",
+    "updated_at": "2025-10-26T12:00:00"
+  },
+  {
+    "client_email": "jennifer.brown@email.com",
+    "agent_email": "emily.chen@realestate.com",
+    "property_title": "Elegant 3-Bedroom Villa in Zamalek",
+    "rating": 1,
+    "comment": "Terrible experience. The agent kept delaying responses, and the property in Zamalek wasn't as described at all.",
+    "created_at": "2025-10-24T14:30:00",
+    "updated_at": "2025-10-24T14:30:00"
+  },
+  {
+    "client_email": "david.johnson@email.com",
+    "agent_email": "lisa.anderson@realestate.com",
+    "property_title": "Classic Parisian Apartment in Montmartre",
+    "rating": 3,
+    "comment": "The apartment in Montmartre was okay but a bit overpriced for its size. The view was lovely, though.",
+    "created_at": "2025-10-22T10:15:00",
+    "updated_at": "2025-10-22T10:15:00"
+  },
+  {
+    "client_email": "david.johnson@email.com",
+    "agent_email": "james.rodriguez@realestate.com",
+    "property_title": "Charming Studio Near Shibuya Crossing",
+    "rating": 5,
+    "comment": "Superb service! Found an amazing studio near Shibuya Station in just two days. The agent spoke English fluently and was very patient.",
+    "created_at": "2025-10-23T11:45:00",
+    "updated_at": "2025-10-23T11:45:00"
+  },
+  {
+    "client_email": "maria.garcia@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "property_title": "Modern Duplex in Midtown Manhattan",
+    "rating": 4,
+    "comment": "The property in Manhattan was spacious and clean. Only issue was a delay in signing the lease, but overall a great experience.",
+    "created_at": "2025-10-25T16:20:00",
+    "updated_at": "2025-10-25T16:20:00"
+  },
+  {
+    "client_email": "amanda.taylor@email.com",
+    "agent_email": "michael.thompson@realestate.com",
+    "property_title": "Beachfront Villa with Private Pool",
+    "rating": 4,
+    "comment": "Loved the villa in Bondi Beach. The listing was accurate, and the team helped us get a great deal. Would definitely recommend!",
+    "created_at": "2025-10-22T09:30:00",
+    "updated_at": "2025-10-22T09:30:00"
+  },
+  {
+    "client_email": "john.williams@email.com",
+    "agent_email": "lisa.anderson@realestate.com",
+    "property_title": "Contemporary Apartment Near Central Park",
+    "rating": 2,
+    "comment": "The apartment photos looked great, but the actual place in Cairo was not well maintained. The agent tried to fix it, but too late.",
+    "created_at": "2025-10-22T13:00:00",
+    "updated_at": "2025-10-22T13:00:00"
+  },
+  {
+    "client_email": "maria.garcia@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "property_title": "Modern Duplex in Midtown Manhattan",
+    "rating": 5,
+    "comment": "Excellent communication and support. Our agent in Manhattan really understood what we were looking for and delivered perfectly.",
+    "created_at": "2025-10-25T17:15:00",
+    "updated_at": "2025-10-25T17:15:00"
+  },
+  {
+    "client_email": "robert.lee@email.com",
+    "agent_email": "emily.chen@realestate.com",
+    "property_title": "Chic Penthouse Overlooking the Seine",
+    "rating": 3,
+    "comment": "The Tokyo flat was nice, but the contract process was confusing. Support team responded slowly.",
+    "created_at": "2025-10-26T11:00:00",
+    "updated_at": "2025-10-26T11:00:00"
+  },
+  {
+    "client_email": "john.williams@email.com",
+    "agent_email": "lisa.anderson@realestate.com",
+    "property_title": "Classic Parisian Apartment in Montmartre",
+    "rating": 4,
+    "comment": "My family loved the apartment in Montmartre. The neighborhood is artistic and quiet. Our agent was very kind and patient.",
+    "created_at": "2025-10-22T10:45:00",
+    "updated_at": "2025-10-22T10:45:00"
+  },
+  {
+    "client_email": "amanda.taylor@email.com",
+    "agent_email": "michael.thompson@realestate.com",
+    "property_title": "Beachfront Villa with Private Pool",
+    "rating": 5,
+    "comment": "Honestly the best rental experience I've had. The Bondi Beach property was spotless, and the staff followed up after move-in. Five stars!",
+    "created_at": "2025-10-22T10:00:00",
+    "updated_at": "2025-10-22T10:00:00"
+  },
+  {
+    "client_email": "maria.garcia@email.com",
+    "agent_email": "emily.chen@realestate.com",
+    "property_title": "Elegant 3-Bedroom Villa in Zamalek",
+    "rating": 1,
+    "comment": "Worst experience. I booked a viewing in Zamalek but the agent never showed up. Completely unprofessional.",
+    "created_at": "2025-10-25T14:00:00",
+    "updated_at": "2025-10-25T14:00:00"
+  },
+  {
+    "client_email": "jennifer.brown@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "property_title": "Luxury 2-Bed Apartment with Burj Khalifa View",
+    "rating": 4,
+    "comment": "Great team. The agent in Downtown Dubai helped us find an apartment close to work and even negotiated a better rent for us.",
+    "created_at": "2025-10-26T13:30:00",
+    "updated_at": "2025-10-26T13:30:00"
+  },
+  {
+    "client_email": "robert.lee@email.com",
+    "agent_email": "james.rodriguez@realestate.com",
+    "property_title": "Charming Studio Near Shibuya Crossing",
+    "rating": 3,
+    "comment": "Decent experience overall. Property was fine but took too long to confirm availability.",
+    "created_at": "2025-10-23T12:00:00",
+    "updated_at": "2025-10-23T12:00:00"
+  },
+  {
+    "client_email": "david.johnson@email.com",
+    "agent_email": "james.rodriguez@realestate.com",
+    "property_title": "Office Space with Skyline View",
+    "rating": 5,
+    "comment": "Amazing! Found a modern flat in Shibuya within budget. The online process was simple and transparent.",
+    "created_at": "2025-10-23T11:30:00",
+    "updated_at": "2025-10-23T11:30:00"
+  },
+  {
+    "client_email": "amanda.taylor@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "property_title": "Modern Duplex in Midtown Manhattan",
+    "rating": 5,
+    "comment": "Very happy with our new home in Manhattan. The agent was friendly and honest about every detail. Smooth experience!",
+    "created_at": "2025-10-25T16:00:00",
+    "updated_at": "2025-10-25T16:00:00"
+  },
+  {
+    "client_email": "jennifer.brown@email.com",
+    "agent_email": "lisa.anderson@realestate.com",
+    "property_title": "Warehouse Space Near Cairo Downtown",
+    "rating": 2,
+    "comment": "Property in Paris didn't match the description. The neighborhood was great but apartment was smaller than advertised.",
+    "created_at": "2025-10-24T09:15:00",
+    "updated_at": "2025-10-24T09:15:00"
+  },
+  {
+    "client_email": "robert.lee@email.com",
+    "agent_email": "emily.chen@realestate.com",
+    "property_title": "Elegant 3-Bedroom Villa in Zamalek",
+    "rating": 5,
+    "comment": "Highly recommend this website! Our agent in Zamalek went above and beyond, even helping us with furniture delivery.",
+    "created_at": "2025-10-24T12:45:00",
+    "updated_at": "2025-10-24T12:45:00"
+  },
+  {
+    "client_email": "amanda.taylor@email.com",
+    "agent_email": "michael.thompson@realestate.com",
+    "property_title": "Beachfront Villa with Private Pool",
+    "rating": 4,
+    "comment": "Nice experience renting in Bondi Beach. The listing matched exactly and the support team was available even on weekends.",
+    "created_at": "2025-10-22T10:30:00",
+    "updated_at": "2025-10-22T10:30:00"
+  },
+  {
+    "client_email": "john.williams@email.com",
+    "agent_email": "james.rodriguez@realestate.com",
+    "property_title": null,
+    "rating": 1,
+    "comment": "The website kept crashing and I couldn't reach anyone for help. Ended up finding a property elsewhere.",
+    "created_at": "2025-10-20T15:00:00",
+    "updated_at": "2025-10-20T15:00:00"
+  },
+  {
+    "client_email": "jennifer.brown@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "property_title": "Luxury 2-Bed Apartment with Burj Khalifa View",
+    "rating": 5,
+    "comment": "Loved the luxury apartment in Downtown Dubai. The agent was on time, polite, and super professional!",
+    "created_at": "2025-10-26T14:00:00",
+    "updated_at": "2025-10-26T14:00:00"
+  },
+  {
+    "client_email": "david.johnson@email.com",
+    "agent_email": "lisa.anderson@realestate.com",
+    "property_title": "Classic Parisian Apartment in Montmartre",
+    "rating": 3,
+    "comment": "The property was okay but not worth the price. The agent was polite but didn't seem very knowledgeable.",
+    "created_at": "2025-10-22T11:00:00",
+    "updated_at": "2025-10-22T11:00:00"
+  },
+  {
+    "client_email": "maria.garcia@email.com",
+    "agent_email": "james.rodriguez@realestate.com",
+    "property_title": "Charming Studio Near Shibuya Crossing",
+    "rating": 4,
+    "comment": "Good experience overall. Found a small studio in Shibuya that fits my needs perfectly.",
+    "created_at": "2025-10-23T10:30:00",
+    "updated_at": "2025-10-23T10:30:00"
+  },
+  {
+    "client_email": "robert.lee@email.com",
+    "agent_email": "lisa.anderson@realestate.com",
+    "property_title": "Classic Parisian Apartment in Montmartre",
+    "rating": 2,
+    "comment": "Agent communication was slow, and I had to follow up multiple times for updates. Property in Montmartre was fine, though.",
+    "created_at": "2025-10-22T14:00:00",
+    "updated_at": "2025-10-22T14:00:00"
+  },
+  {
+    "client_email": "amanda.taylor@email.com",
+    "agent_email": "michael.thompson@realestate.com",
+    "property_title": "Beachfront Villa with Private Pool",
+    "rating": 5,
+    "comment": "The Bondi Beach listing was perfect for our vacation. Quick responses and transparent pricing. Highly recommend this site!",
+    "created_at": "2025-10-22T08:45:00",
+    "updated_at": "2025-10-22T08:45:00"
+  },
+  {
+    "client_email": "maria.garcia@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "property_title": "Luxury 2-Bed Apartment with Burj Khalifa View",
+    "rating": 4,
+    "comment": "Agent in Manhattan was very professional and gave great advice on neighborhoods. The apartment had everything we needed.",
+    "created_at": "2025-10-26T15:30:00",
+    "updated_at": "2025-10-26T15:30:00"
+  },
+  {
+    "client_email": "john.williams@email.com",
+    "agent_email": "michael.thompson@realestate.com",
+    "property_title": null,
+    "rating": 1,
+    "comment": "I wouldn't use this platform again. The Cairo listing was fake, and the agent stopped replying after taking the deposit.",
+    "created_at": "2025-10-20T16:00:00",
+    "updated_at": "2025-10-20T16:00:00"
+  },
+  {
+    "client_email": "david.johnson@email.com",
+    "agent_email": "james.rodriguez@realestate.com",
+    "property_title": "Office Space with Skyline View",
+    "rating": 5,
+    "comment": "Amazing customer support! The agent in Shibuya helped me understand all the rental documents in English. Super helpful!",
+    "created_at": "2025-10-23T11:15:00",
+    "updated_at": "2025-10-23T11:15:00"
+  },
+  {
+    "client_email": "robert.lee@email.com",
+    "agent_email": "emily.chen@realestate.com",
+    "property_title": "Chic Penthouse Overlooking the Seine",
+    "rating": 4,
+    "comment": "Good user experience. The website made searching and booking easy. My new flat in Paris is lovely!",
+    "created_at": "2025-10-26T10:00:00",
+    "updated_at": "2025-10-26T10:00:00"
+  },
+  {
+    "client_email": "amanda.taylor@email.com",
+    "agent_email": "emily.chen@realestate.com",
+    "property_title": "Elegant 3-Bedroom Villa in Zamalek",
+    "rating": 5,
+    "comment": "Fantastic service! The Zamalek property was exactly what we hoped for, and our agent checked in after we moved in. Great care and attention.",
+    "created_at": "2025-10-24T13:00:00",
+    "updated_at": "2025-10-24T13:00:00"
+  }
+]

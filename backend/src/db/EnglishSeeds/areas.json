@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Downtown Dubai",
+    "city": "Dubai",
+    "latitude": 25.204849,
+    "longitude": 55.270783,
+    "description": "A modern and luxurious district known for the Burj Khalifa, Dubai Mall, and upscale residential towers with stunning skyline views.",
+    "lang": "en"
+  },
+  {
+    "name": "Manhattan",
+    "city": "New York City",
+    "latitude": 40.78306,
+    "longitude": -73.971249,
+    "description": "The heart of New York City, home to Central Park, Wall Street, Times Square, and some of the world’s most iconic skyscrapers.",
+    "lang": "en"
+  },
+  {
+    "name": "Shibuya",
+    "city": "Tokyo",
+    "latitude": 35.659516,
+    "longitude": 139.700512,
+    "description": "A bustling commercial and nightlife center famous for its scramble crossing, shopping, entertainment, and vibrant city life.",
+    "lang": "en"
+  },
+  {
+    "name": "Montmartre",
+    "city": "Paris",
+    "latitude": 48.886707,
+    "longitude": 2.343104,
+    "description": "A charming hilltop neighborhood known for its artistic history, cobblestone streets, and the stunning Basilica of Sacré-Cœur.",
+    "lang": "en"
+  },
+  {
+    "name": "Zamalek",
+    "city": "Cairo",
+    "latitude": 30.057373,
+    "longitude": 31.22117,
+    "description": "An affluent island district on the Nile featuring embassies, cultural venues, and a mix of elegant old villas and modern apartments.",
+    "lang": "en"
+  },
+  {
+    "name": "Bondi Beach",
+    "city": "Sydney",
+    "latitude": -33.890842,
+    "longitude": 151.274292,
+    "description": "A world-famous coastal area offering golden sand beaches, surf culture, seaside cafés, and a laid-back Australian lifestyle.",
+    "lang": "en"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "short_name": "عقار ويب",
+  "name": "عقار ويب - منصة العقارات في مصر",
+  "description": "ابحث عن شقق وفلل ومكاتب للبيع والإيجار في أفضل المناطق في مصر",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1a5276",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary"
+}

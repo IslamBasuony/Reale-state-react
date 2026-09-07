@@ -1,0 +1,200 @@
+[
+  {
+    "property_title": "Luxury 2-Bed Apartment with Burj Khalifa View",
+    "client_email": "john.williams@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "viewing_date": "2025-10-25T10:00:00",
+    "status": "completed",
+    "notes": "Client interested in the location and Burj Khalifa views from the apartment",
+    "feedback": "Wonderful property with great views, client wants to take time to think about it",
+    "created_at": "2025-10-20T14:30:00",
+    "updated_at": "2025-10-25T11:00:00"
+  },
+  {
+    "property_title": "Luxury 2-Bed Apartment with Burj Khalifa View",
+    "client_email": "jennifer.brown@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "viewing_date": "2025-10-28T14:00:00",
+    "status": "scheduled",
+    "notes": "New client looking for a luxury apartment in Downtown Dubai",
+    "feedback": null,
+    "created_at": "2025-10-20T15:45:00",
+    "updated_at": "2025-10-20T15:45:00"
+  },
+  {
+    "property_title": "Charming Studio Near Shibuya Crossing",
+    "client_email": "david.johnson@email.com",
+    "agent_email": "james.rodriguez@realestate.com",
+    "viewing_date": "2025-10-23T09:30:00",
+    "status": "completed",
+    "notes": "Young professional seeking a studio apartment near Shibuya Station",
+    "feedback": "Size is a bit compact but location is excellent and price is reasonable",
+    "created_at": "2025-10-18T10:00:00",
+    "updated_at": "2025-10-23T10:15:00"
+  },
+  {
+    "property_title": "Charming Studio Near Shibuya Crossing",
+    "client_email": "maria.garcia@email.com",
+    "agent_email": "james.rodriguez@realestate.com",
+    "viewing_date": "2025-10-26T16:00:00",
+    "status": "cancelled",
+    "notes": "Client requested to cancel the viewing",
+    "feedback": "Client was unavailable at the scheduled time",
+    "created_at": "2025-10-19T11:20:00",
+    "updated_at": "2025-10-25T13:00:00"
+  },
+  {
+    "property_title": "Elegant 3-Bedroom Villa in Zamalek",
+    "client_email": "john.williams@email.com",
+    "agent_email": "emily.chen@realestate.com",
+    "viewing_date": "2025-10-24T11:00:00",
+    "status": "completed",
+    "notes": "Family looking for a spacious townhouse in Zamalek with Nile views",
+    "feedback": "Beautiful townhouse, perfect for our family needs. Looking to negotiate on price",
+    "created_at": "2025-10-20T09:00:00",
+    "updated_at": "2025-10-24T12:30:00"
+  },
+  {
+    "property_title": "Elegant 3-Bedroom Villa in Zamalek",
+    "client_email": "robert.lee@email.com",
+    "agent_email": "emily.chen@realestate.com",
+    "viewing_date": "2025-10-29T15:30:00",
+    "status": "scheduled",
+    "notes": "Investment-minded client interested in property appreciation",
+    "feedback": null,
+    "created_at": "2025-10-20T16:15:00",
+    "updated_at": "2025-10-20T16:15:00"
+  },
+  {
+    "property_title": "Beachfront Villa with Private Pool",
+    "client_email": "amanda.taylor@email.com",
+    "agent_email": "michael.thompson@realestate.com",
+    "viewing_date": "2025-10-22T08:00:00",
+    "status": "completed",
+    "notes": "Affluent client seeking a luxury beachfront villa with private pool",
+    "feedback": "Villa exceeds expectations, the pool and ocean views are stunning",
+    "created_at": "2025-10-15T13:45:00",
+    "updated_at": "2025-10-22T09:30:00"
+  },
+  {
+    "property_title": "Beachfront Villa with Private Pool",
+    "client_email": "jennifer.brown@email.com",
+    "agent_email": "michael.thompson@realestate.com",
+    "viewing_date": "2025-10-30T10:00:00",
+    "status": "scheduled",
+    "notes": "Second client interested in the same beachfront property",
+    "feedback": null,
+    "created_at": "2025-10-20T14:20:00",
+    "updated_at": "2025-10-20T14:20:00"
+  },
+  {
+    "property_title": "Classic Parisian Apartment in Montmartre",
+    "client_email": "david.johnson@email.com",
+    "agent_email": "lisa.anderson@realestate.com",
+    "viewing_date": "2025-10-21T13:00:00",
+    "status": "no_show",
+    "notes": "Client did not attend the viewing without prior notice",
+    "feedback": "Client failed to appear",
+    "created_at": "2025-10-19T10:30:00",
+    "updated_at": "2025-10-21T13:30:00"
+  },
+  {
+    "property_title": "Classic Parisian Apartment in Montmartre",
+    "client_email": "john.williams@email.com",
+    "agent_email": "lisa.anderson@realestate.com",
+    "viewing_date": "2025-10-27T14:30:00",
+    "status": "scheduled",
+    "notes": "Re-scheduling viewing for new client interested in Montmartre apartment",
+    "feedback": null,
+    "created_at": "2025-10-20T11:15:00",
+    "updated_at": "2025-10-20T11:15:00"
+  },
+  {
+    "property_title": "Modern Duplex in Midtown Manhattan",
+    "client_email": "maria.garcia@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "viewing_date": "2025-10-25T15:00:00",
+    "status": "completed",
+    "notes": "Investor client looking for a luxury duplex in Midtown Manhattan",
+    "feedback": "Modern apartment in a great location. Price is slightly high but property is desirable",
+    "created_at": "2025-10-18T14:00:00",
+    "updated_at": "2025-10-25T16:15:00"
+  },
+  {
+    "property_title": "Modern Duplex in Midtown Manhattan",
+    "client_email": "robert.lee@email.com",
+    "agent_email": "sarah.mitchell@realestate.com",
+    "viewing_date": "2025-10-31T09:00:00",
+    "status": "scheduled",
+    "notes": "New client interested in high-end duplex with panoramic city views",
+    "feedback": null,
+    "created_at": "2025-10-20T12:45:00",
+    "updated_at": "2025-10-20T12:45:00"
+  },
+  {
+    "property_title": "Office Space with Skyline View",
+    "client_email": "jennifer.brown@email.com",
+    "agent_email": "james.rodriguez@realestate.com",
+    "viewing_date": "2025-10-23T10:30:00",
+    "status": "completed",
+    "notes": "Startup company searching for office space in Business Bay",
+    "feedback": "Space is adequate and location is good. Looking to negotiate on rental terms",
+    "created_at": "2025-10-17T09:00:00",
+    "updated_at": "2025-10-23T11:45:00"
+  },
+  {
+    "property_title": "Chic Penthouse Overlooking the Seine",
+    "client_email": "amanda.taylor@email.com",
+    "agent_email": "emily.chen@realestate.com",
+    "viewing_date": "2025-10-26T11:00:00",
+    "status": "completed",
+    "notes": "High-end client seeking luxury penthouse in Montmartre with Eiffel Tower views",
+    "feedback": "Views of the Seine are breathtaking. Penthouse is truly luxurious, scheduling another viewing soon",
+    "created_at": "2025-10-19T15:30:00",
+    "updated_at": "2025-10-26T12:30:00"
+  },
+  {
+    "property_title": "Contemporary Apartment Near Central Park",
+    "client_email": "david.johnson@email.com",
+    "agent_email": "michael.thompson@realestate.com",
+    "viewing_date": "2025-10-22T14:00:00",
+    "status": "completed",
+    "notes": "Family looking for contemporary apartment near Central Park",
+    "feedback": "Perfect location near the park with modern amenities. Family wants time to consider",
+    "created_at": "2025-10-20T10:15:00",
+    "updated_at": "2025-10-22T15:30:00"
+  },
+  {
+    "property_title": "Contemporary Apartment Near Central Park",
+    "client_email": "maria.garcia@email.com",
+    "agent_email": "michael.thompson@realestate.com",
+    "viewing_date": "2025-10-28T16:30:00",
+    "status": "scheduled",
+    "notes": "Another client interested in apartment with Central Park access",
+    "feedback": null,
+    "created_at": "2025-10-20T13:50:00",
+    "updated_at": "2025-10-20T13:50:00"
+  },
+  {
+    "property_title": "Warehouse Space Near Cairo Downtown",
+    "client_email": "robert.lee@email.com",
+    "agent_email": "lisa.anderson@realestate.com",
+    "viewing_date": "2025-10-24T09:00:00",
+    "status": "completed",
+    "notes": "Business owner seeking warehouse space near Downtown Cairo",
+    "feedback": "Large warehouse with excellent access to main roads. Price is competitive",
+    "created_at": "2025-10-16T08:30:00",
+    "updated_at": "2025-10-24T10:15:00"
+  },
+  {
+    "property_title": "Warehouse Space Near Cairo Downtown",
+    "client_email": "amanda.taylor@email.com",
+    "agent_email": "lisa.anderson@realestate.com",
+    "viewing_date": "2025-10-29T10:30:00",
+    "status": "scheduled",
+    "notes": "Logistics company looking for additional warehouse facility",
+    "feedback": null,
+    "created_at": "2025-10-20T14:00:00",
+    "updated_at": "2025-10-20T14:00:00"
+  }
+]

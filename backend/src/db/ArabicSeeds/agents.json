@@ -1,0 +1,56 @@
+[
+  {
+    "first_name": "سارة",
+    "last_name": "المنصوري",
+    "phone": "+20-101-3001",
+    "email": "sara.almansouri@estatearabia.com",
+    "password": "0923lkldspp3$%#39;ld0-2",
+    "bio": "خبيرة في العقارات الفاخرة ولديها أكثر من 15 سنة خبرة في السوق العقاري الراقي.",
+    "profile_image_url": "https://example.com/images/sara-almansouri.jpg",
+    "is_active": true
+  },
+  {
+    "first_name": "خالد",
+    "last_name": "العتيبي",
+    "phone": "+20-101-3002",
+    "email": "khaled.alotaibi@estatearabia.com",
+    "password": "0923lkldspp3$%#39;ld0-2",
+
+    "bio": "متخصص في العقارات التجارية وفرص الاستثمار في المشاريع الكبرى.",
+    "profile_image_url": "https://example.com/images/khaled-alotaibi.jpg",
+    "is_active": true
+  },
+  {
+    "first_name": "ريم",
+    "last_name": "الزهراني",
+    "phone": "+20-101-3003",
+    "email": "reem.alzahrani@estatearabia.com",
+    "password": "0923lkldspp3$%#39;ld0-2",
+
+    "bio": "تركز على العقارات السكنية ومساعدة المشترين لأول مرة في إيجاد منازل أحلامهم.",
+    "profile_image_url": "https://example.com/images/reem-alzahrani.jpg",
+    "is_active": true
+  },
+  {
+    "first_name": "ياسر",
+    "last_name": "المصري",
+    "phone": "+20-101-3004",
+    "email": "yasser.almasri@estatearabia.com",
+    "password": "0923lkldspp3$%#39;ld0-2",
+
+    "bio": "وكيل عقاري ذو خبرة واسعة في تطوير وتجديد العقارات في المدن الكبرى.",
+    "profile_image_url": "https://example.com/images/yasser-almasri.jpg",
+    "is_active": false
+  },
+  {
+    "first_name": "نورة",
+    "last_name": "الحربي",
+    "phone": "+20-101-3005",
+    "email": "noura.alharbi@estatearabia.com",
+    "password": "0923lkldspp3$%#39;ld0-2",
+
+    "bio": "متخصصة في العقارات الساحلية والمنازل ذات الإطلالات المميزة.",
+    "profile_image_url": "https://example.com/images/noura-alharbi.jpg",
+    "is_active": true
+  }
+]

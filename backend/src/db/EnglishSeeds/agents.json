@@ -1,0 +1,57 @@
+[
+  {
+    "first_name": "Sarah",
+    "last_name": "Mitchell",
+    "phone": "+1-555-0101",
+    "email": "sarah.mitchell@realestate.com",
+
+    "password": "0923lkldspp3$%#39;ld0-2",
+    "bio": "Expert in luxury properties with 15 years of experience in high-end real estate",
+    "profile_image_url": "https://example.com/images/sarah-mitchell.jpg",
+    "is_active": true
+  },
+  {
+    "first_name": "James",
+    "last_name": "Rodriguez",
+    "phone": "+1-555-0102",
+    "email": "james.rodriguez@realestate.com",
+    "password": "0923lkldspp3$%#39;ld0-2",
+
+    "bio": "Specializes in commercial properties and investment opportunities",
+    "profile_image_url": "https://example.com/images/james-rodriguez.jpg",
+    "is_active": true
+  },
+  {
+    "first_name": "Emily",
+    "last_name": "Chen",
+    "phone": "+1-555-0103",
+    "email": "emily.chen@realestate.com",
+    "password": "0923lkldspp3$%#39;ld0-2",
+
+    "bio": "Focused on residential properties and first-time homebuyers",
+    "profile_image_url": "https://example.com/images/emily-chen.jpg",
+    "is_active": true
+  },
+  {
+    "first_name": "Michael",
+    "last_name": "Thompson",
+    "phone": "+1-555-0104",
+    "email": "michael.thompson@realestate.com",
+    "password": "0923lkldspp3$%#39;ld0-2",
+
+    "bio": "Veteran agent with expertise in property development and renovations",
+    "profile_image_url": "https://example.com/images/michael-thompson.jpg",
+    "is_active": false
+  },
+  {
+    "first_name": "Lisa",
+    "last_name": "Anderson",
+    "phone": "+1-555-0105",
+    "email": "lisa.anderson@realestate.com",
+    "password": "0923lkldspp3$%#39;ld0-2",
+
+    "bio": "Specialist in waterfront and premium residential estates",
+    "profile_image_url": "https://example.com/images/lisa-anderson.jpg",
+    "is_active": true
+  }
+]

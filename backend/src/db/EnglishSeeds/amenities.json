@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Swimming Pool",
+    "icon": "pool",
+    "description": "An outdoor or rooftop swimming pool offering a relaxing space with scenic views, ideal for residents in warm climates like Dubai and Sydney.",
+    "lang": "en"
+  },
+  {
+    "name": "Gym & Fitness Center",
+    "icon": "dumbbell",
+    "description": "A fully equipped fitness facility with modern exercise machines and training areas, commonly found in upscale apartments in Manhattan or Downtown Dubai.",
+    "lang": "en"
+  },
+  {
+    "name": "Rooftop Terrace",
+    "icon": "building",
+    "description": "A beautifully designed rooftop terrace offering panoramic city views, perfect for gatherings and outdoor relaxation in urban areas like Shibuya or Paris.",
+    "lang": "en"
+  },
+  {
+    "name": "24/7 Security",
+    "icon": "shield",
+    "description": "Round-the-clock security service with surveillance systems and on-site personnel ensuring residents’ safety and privacy.",
+    "lang": "en"
+  },
+  {
+    "name": "Parking Garage",
+    "icon": "car",
+    "description": "Secure underground or covered parking facility providing easy access and protection for vehicles, essential in high-density areas like Manhattan and Cairo.",
+    "lang": "en"
+  },
+  {
+    "name": "High-Speed Internet",
+    "icon": "wifi",
+    "description": "Reliable, high-speed Wi-Fi connectivity suitable for both business and personal use, standard in modern city apartments.",
+    "lang": "en"
+  },
+  {
+    "name": "Air Conditioning",
+    "icon": "snowflake",
+    "description": "Central air conditioning system ensuring a comfortable indoor temperature, especially valuable in hot regions like Dubai and Cairo.",
+    "lang": "en"
+  },
+  {
+    "name": "Balcony with View",
+    "icon": "panorama",
+    "description": "Private balcony offering scenic views of the city, park, or beach, enhancing the living experience in areas like Montmartre and Bondi Beach.",
+    "lang": "en"
+  },
+  {
+    "name": "Pet Friendly",
+    "icon": "paw",
+    "description": "Residences that welcome pets, providing dedicated walking areas or nearby parks, ideal for communities in Sydney or New York.",
+    "lang": "en"
+  },
+  {
+    "name": "Concierge Service",
+    "icon": "bell-concierge",
+    "description": "Professional concierge available to assist residents with daily tasks, reservations, and personal requests, typical of luxury living in Downtown Dubai or Manhattan.",
+    "lang": "en"
+  },
+  {
+    "name": "Garden Area",
+    "icon": "leaf",
+    "description": "Beautifully landscaped green spaces offering tranquility and outdoor seating areas, perfect for neighborhoods like Zamalek or Montmartre.",
+    "lang": "en"
+  },
+  {
+    "name": "Smart Home System",
+    "icon": "home",
+    "description": "Modern smart home integration allowing control of lighting, temperature, and security via mobile apps or voice assistants.",
+    "lang": "en"
+  },
+  {
+    "name": "On-site Café",
+    "icon": "coffee",
+    "description": "A cozy café located within or adjacent to the property, offering residents easy access to quality coffee and social space.",
+    "lang": "en"
+  },
+  {
+    "name": "Laundry Facility",
+    "icon": "washer",
+    "description": "On-site laundry rooms or in-unit washer and dryer installations for convenience and comfort.",
+    "lang": "en"
+  },
+  {
+    "name": "Elevator Access",
+    "icon": "elevator",
+    "description": "Modern elevators providing smooth and fast access to all building floors, especially essential in multi-story apartments in Tokyo or New York.",
+    "lang": "en"
+  },
+  {
+    "name": "Playground",
+    "icon": "child",
+    "description": "Outdoor play area for children, providing a safe and fun space for families, commonly found in residential zones like Zamalek or Bondi Beach.",
+    "lang": "en"
+  },
+  {
+    "name": "BBQ Area",
+    "icon": "utensils",
+    "description": "Outdoor barbecue stations for residents to enjoy social gatherings and meals, especially popular in coastal or suburban properties.",
+    "lang": "en"
+  },
+  {
+    "name": "Spa & Sauna",
+    "icon": "spa",
+    "description": "Relaxation amenities including spa, sauna, or steam room, offering residents a luxurious wellness experience.",
+    "lang": "en"
+  },
+  {
+    "name": "Library Lounge",
+    "icon": "book",
+    "description": "Quiet reading and study area designed for residents who appreciate privacy and concentration.",
+    "lang": "en"
+  },
+  {
+    "name": "Beach Access",
+    "icon": "umbrella-beach",
+    "description": "Direct or nearby access to the beach, allowing residents to enjoy the coastal lifestyle in places like Bondi Beach or Dubai Marina.",
+    "lang": "en"
+  }
+]

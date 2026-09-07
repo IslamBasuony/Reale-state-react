@@ -1,0 +1,52 @@
+[
+  {
+    "first_name": "مدير",
+    "last_name": "النظام",
+    "phone": "+20-100-5500",
+    "email": "admin@aqarweb.com",
+    "password": "Admin@12345",
+    "is_admin": true
+  },
+  {
+    "first_name": "أحمد",
+    "last_name": "الخطيب",
+    "phone": "+20-100-5501",
+    "email": "ahmed.alkhatib@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  },
+  {
+    "first_name": "ليان",
+    "last_name": "العتيبي",
+    "phone": "+20-100-5502",
+    "email": "layan.alotaibi@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  },
+  {
+    "first_name": "سلمان",
+    "last_name": "عبدالله",
+    "phone": "+20-100-5503",
+    "email": "salman.abdullah@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  },
+  {
+    "first_name": "جود",
+    "last_name": "الحربي",
+    "phone": "+20-100-5504",
+    "email": "joud.alharbi@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  },
+  {
+    "first_name": "فهد",
+    "last_name": "المصري",
+    "phone": "+20-100-5505",
+    "email": "fahad.almasri@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  },
+  {
+    "first_name": "ريماس",
+    "last_name": "الزيدي",
+    "phone": "+20-100-5506",
+    "email": "reemas.alzaidi@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  }
+]

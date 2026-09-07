@@ -1,0 +1,270 @@
+.projects-section {
+  width: 70%;
+  margin: 60px auto;
+  text-align: right;
+  direction: rtl;
+}
+
+.projects-header {
+  text-align: right;
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subtitle {
+  color: #0c3c3c;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.btn-more {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-more:hover {
+  background: #333;
+}
+
+/* ===> cards <=== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 9px solid #1a936f;
+  position: relative;
+}
+
+.project-date {
+  background-color: #1a936f;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 0 0 0 8px; 
+  display: inline-block;
+  margin: 10px 0 0;
+  position: absolute; 
+  bottom: 40%; 
+  left: 0; 
+  z-index: 5;
+}
+
+.project-body {
+  padding: 15px;
+}
+
+.project-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.project-body p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #0c3c3c;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+/* ===> Responsive <=== */
+@media (max-width: 1200px) {
+  .projects-section {
+    width: 80%;
+  }
+  .projects-grid {
+    gap: 20px;
+  }
+  .title {
+    font-size: 34px;
+  }
+  .project-date {
+    font-size: 12px;
+    padding: 5px 12px;
+    bottom: calc(40% + 2vw);
+    left: 0
+    ;
+  }
+}
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .btn-more {
+    align-self: flex-end;
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  .project-img {
+    height: 220px;
+  }
+  .project-body {
+    padding: 12px;
+  }
+  .project-body h3 {
+    font-size: 16px;
+  }
+  .project-body p {
+    font-size: 14px;
+  }
+  .read-more-btn {
+    font-size: 14px;
+  }
+  .project-date {
+    font-size: 12px;
+    padding: 5px 12px;
+    bottom: 40%;
+    left: 0
+    ;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    width: 85%;
+    margin: 40px auto;
+  }
+  .projects-header {
+    margin-bottom: 30px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 26px;
+  }
+  .btn-more {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .projects-grid {
+    gap: 15px;
+  }
+  .project-img {
+    height: 200px;
+  }
+  .project-date {
+    font-size: 12px;
+    padding: 5px 12px;
+    bottom: calc(40% + 1vw);
+    left: 0;
+  }
+  .project-body {
+    padding: 10px;
+  }
+  .project-body h3 {
+    font-size: 15px;
+  }
+  .project-body p {
+    font-size: 13px;
+  }
+  .read-more-btn {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-section {
+    width: 90%;
+    margin: 30px auto;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .projects-header {
+    margin-bottom: 25px;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .btn-more {
+    padding: 8px 18px;
+    font-size: 13px;
+    align-self: center;
+  }
+  .project-img {
+    height: 180px;
+  }
+  .project-date {
+    font-size: 11px;
+    padding: 4px 10px;
+    bottom: 40%;
+    left: 0;
+  }
+  .project-body {
+    padding: 8px;
+  }
+  .project-body h3 {
+    font-size: 14px;
+  }
+  .project-body p {
+    font-size: 12px;
+  }
+  .read-more-btn {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "first_name": "System",
+    "last_name": "Admin",
+    "phone": "+1-555-1000",
+    "email": "admin@aqarweb.com",
+    "password": "Admin@12345",
+    "is_admin": true
+  },
+  {
+    "first_name": "John",
+    "last_name": "Williams",
+    "phone": "+1-555-1001",
+    "email": "john.williams@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  },
+  {
+    "first_name": "Jennifer",
+    "last_name": "Brown",
+    "phone": "+1-555-1002",
+    "email": "jennifer.brown@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  },
+  {
+    "first_name": "David",
+    "last_name": "Johnson",
+    "phone": "+1-555-1003",
+    "email": "david.johnson@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  },
+  {
+    "first_name": "Maria",
+    "last_name": "Garcia",
+    "phone": "+1-555-1004",
+    "email": "maria.garcia@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  },
+  {
+    "first_name": "Robert",
+    "last_name": "Lee",
+    "phone": "+1-555-1005",
+    "email": "robert.lee@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  },
+  {
+    "first_name": "Amanda",
+    "last_name": "Taylor",
+    "phone": "+1-555-1006",
+    "email": "amanda.taylor@email.com",
+    "password": "0923lkldspp3$%#39;ld0-2"
+  }
+]
