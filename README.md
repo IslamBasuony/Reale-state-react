@@ -1,11 +1,27 @@
-# AqarWeb — Real Estate Platform
+# Real Estate React
 
-Full-stack real estate listing platform with Arabic-first UI, admin dashboard, and PostgreSQL backend.
+A full-stack real estate listing platform with an Arabic-first frontend, an admin dashboard, and a PostgreSQL-backed REST API. Two independent apps live in one repository — `backend/` (Express API) and `frontend/` (React SPA).
+
+## Features
+
+- Bilingual property listings (`ar` / `en`) served through a single API
+- Sale / Rent pages with purpose and location filtering
+- Property details, areas, projects, news, and agents pages
+- Client registration, login, logout, and profile
+- Password reset with secure token flow
+- Favorites with per-user scoped localStorage
+- Property comparison page
+- Admin dashboard with:
+  - Property, agent, client, contact, inquiry, and subscriber management
+  - Audit logs
+  - Reports and charts (bar, donut, line)
+- SEO support via `react-helmet-async` and JSON-LD
+- Server-side sessions (PostgreSQL-backed) with httpOnly + sameSite:strict cookies
 
 ## Tech Stack
 
 ### Frontend
-- **React 19** (Create React App, JSX)
+- **React 19** (Create React App, JSX sources)
 - **React Router v6** (client-side routing)
 - **Bootstrap 5** + Bootstrap Icons
 - **Swiper** (carousels)
@@ -14,17 +30,31 @@ Full-stack real estate listing platform with Arabic-first UI, admin dashboard, a
 
 ### Backend
 - **Express 5** (ESM, `"type": "module"`)
-- **PostgreSQL** (via `pg` pool)
-- **Passport.js** (local + JWT strategies)
-- **express-session** with `connect-pg-simple` (server-side sessions)
-- **bcrypt** (password hashing)
+- **Passport.js** (local strategy) + **express-session** with `connect-pg-simple`
+- **bcrypt** (password hashing, 10 rounds)
 - **Helmet** (security headers)
 - **Multer** (file uploads)
 - **express-validator** (input validation)
 
+### PostgreSQL
+- Database layer through `pg` connection pool
+- ENUM types for status, purpose, currency, price period, property type, and viewing status
+- Views (`vw_properties_full`, `vw_agent_performance`)
+- `updated_at` triggers, performance indexes, and incremental migrations
+
 ### Testing
-- **Backend:** Vitest + Supertest (hits live Postgres test DB)
+- **Backend:** Vitest + Supertest (hits a live PostgreSQL test DB)
 - **Frontend:** Jest + React Testing Library (jsdom)
+
+## Authentication
+
+- Backend: session-based auth handled by the real API at `/auth/register`, `/auth/login`, `/auth/logout`, and `/auth/me`
+- Passport local strategy authenticates by email; bcrypt hashes passwords (10 rounds)
+- Sessions are stored server-side in the `sessions` table via `connect-pg-simple`
+- Session fixation protection via `req.session.regenerate`
+- Session cookie is httpOnly with `sameSite: strict`
+- Frontend delegates auth to the backend; the session cookie (`connect.sid`) is the source of truth — no credentials in localStorage
+- `AuthContext` restores the session on mount via `getCurrentUser()`
 
 ## Project Structure
 
@@ -132,6 +162,10 @@ CREATE DATABASE real_estate_db;
 CREATE DATABASE real_estate_db_test;
 ```
 
+### Apply the schema
+
+The development and production schemas are defined in `backend/src/db/schema.sql`. Existing installations can apply incremental changes with the SQL files in `backend/src/db/migrations/`.
+
 ### Seed (development only)
 
 ```bash
@@ -141,7 +175,9 @@ npm run seed
 
 > **Warning:** `npm run seed` is **destructive** — it drops and recreates all tables, then re-seeds with Arabic and English sample data. Never run this against a production database.
 
-## Running the Application
+> **Note:** seed files contain plaintext development-only credentials (admin and demo user passwords). These are sample data for local development; change them before any real deployment.
+
+## Development
 
 ### Backend (port 5000)
 
@@ -150,6 +186,8 @@ cd backend
 npm start
 ```
 
+`npm start` only boots the server — it never touches the database. Run `npm run seed` first on a fresh checkout.
+
 ### Frontend (port 3000)
 
 ```bash
@@ -157,7 +195,7 @@ cd frontend
 npm start
 ```
 
-The frontend proxies API requests to the backend via CRA's `proxy` setting (`http://localhost:5000`).
+The frontend proxies API requests to the backend via CRA's `proxy` setting (`http://localhost:5000`). On fetch failure, components fall back to local `src/data/` files so the UI renders even without a running backend.
 
 ## API
 
@@ -197,7 +235,29 @@ Tests use the `real_estate_db_test` database — never the development database.
 
 ```bash
 cd frontend
+# Watch mode
 npm test
+# Single run
+CI=true npm test
+```
+
+## Production Build
+
+### Frontend
+
+```bash
+cd frontend
+npm run build
+```
+
+The production bundle is emitted to `frontend/build/` (gitignored). Serve it with any static host or CDN.
+
+### Backend
+
+```bash
+cd backend
+# Ensure NODE_ENV=production and all required env vars are set
+npm start
 ```
 
 ## Linting
