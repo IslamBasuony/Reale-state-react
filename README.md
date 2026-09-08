@@ -24,7 +24,6 @@ A full-stack real estate listing platform with an Arabic-first frontend, an admi
 - **React 19** (Create React App, JSX sources)
 - **React Router v6** (client-side routing)
 - **Bootstrap 5** + Bootstrap Icons
-- **Swiper** (carousels)
 - **Font Awesome 7**
 - **react-helmet-async** (SEO)
 
@@ -140,18 +139,22 @@ npm install
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `DB_HOST` | Yes | `localhost` | PostgreSQL host |
-| `DB_PORT` | Yes | `5432` | PostgreSQL port |
-| `DB_NAME` | Yes | `real_estate_db` | Database name |
-| `DB_USER` | Yes | `postgres` | Database user |
-| `DB_PASSWORD` | Yes | — | Database password |
+| `NODE_ENV` | Prod | `development` | `production` in deployed environments (enables Secure cookies, proxies, static SPA serving) |
+| `PORT` | No | `5000` | HTTP port for the Express server (the host sets this via its platform env) |
+| `DB_HOST` | Yes* | `localhost` | PostgreSQL host |
+| `DB_PORT` | Yes* | `5432` | PostgreSQL port |
+| `DB_NAME` | Yes* | `real_estate_db` | Database name |
+| `DB_USER` | Yes* | `postgres` | Database user |
+| `DB_PASSWORD` | Yes* | `password` (dev) | Database password |
 | `TEST_DB_HOST` | For tests | `localhost` | Test database host |
 | `TEST_DB_PORT` | For tests | `5432` | Test database port |
 | `TEST_DB_NAME` | For tests | `real_estate_db_test` | Test database name |
 | `TEST_DB_USER` | For tests | `postgres` | Test database user |
 | `TEST_DB_PASSWORD` | For tests | — | Test database password |
 | `SESSION_SECRET_KEY` | Yes | — | Express session secret (server won't start without it) |
-| `CLIENT_URL` | Yes | `http://localhost:3000` | Frontend URL for CORS |
+| `CLIENT_URL` | Yes* | `http://localhost:3000` | Allowed credentialed CORS origin — must be the public HTTPS app URL in production |
+
+\* Dev defaults are provided for `DB_*` only when `NODE_ENV` is not `production` — always set real credentials explicitly in production. `CLIENT_URL` has no production default.
 
 ## Database Setup
 
@@ -205,15 +208,18 @@ All API responses are wrapped as `{ success: boolean, data: any }`.
 |-------|--------|-------------|
 | `/api/:lang/listings` | GET | List properties (`lang` = `en` or `ar`) |
 | `/api/:lang/listings/:id` | GET | Get property details |
-| `/api/users/:id` | GET | Get user profile (requires session) |
+| `/api/:lang/brokers` | GET | List agents |
+| `/api/:lang/users/:id` | GET | Get user profile (requires session) |
+| `/api/:lang/newsletter` | POST | Newsletter subscription |
+| `/api/:lang/contact` | POST | Contact form submission |
+| `/api/:lang/inquiries` | POST | Project inquiry |
 | `/auth/register` | POST | Register new user |
 | `/auth/login` | POST | Login |
 | `/auth/logout` | POST | Logout |
 | `/auth/me` | GET | Current user (requires session) |
+| `/auth/forgot-password` | POST | Request a password reset |
+| `/auth/reset-password` | POST | Reset password with token |
 | `/api/admin/*` | Various | Admin dashboard endpoints |
-| `/api/newsletter/*` | POST | Newsletter subscription |
-| `/api/contact/*` | POST | Contact form submission |
-| `/api/projects/:id/inquiries` | POST | Project inquiry |
 
 ## Testing
 
@@ -250,7 +256,7 @@ cd frontend
 npm run build
 ```
 
-The production bundle is emitted to `frontend/build/` (gitignored). Serve it with any static host or CDN.
+The production bundle is emitted to `frontend/build/` (gitignored). In production, Express serves this build directly (same-origin), so no additional static host is required.
 
 ### Backend
 
@@ -259,6 +265,67 @@ cd backend
 # Ensure NODE_ENV=production and all required env vars are set
 npm start
 ```
+
+## Deployment & Production
+
+### Architecture
+
+```
+Browser ──HTTPS──▶ Express (Node)  ──pg──▶ Managed PostgreSQL
+                    │
+                    ├── /api/*, /auth/*, /uploads/*   (REST + sessions)
+                    ├── /health                        (liveness probe)
+                    └── frontend/build/*               (built React SPA)
+```
+
+One Node/Express instance serves both the API and the built React SPA on a single HTTPS origin. This is intentional: `express-session` cookies use `SameSite=strict` + `Secure`, which requires the frontend and API to share an origin (no reverse proxy, no serverless, no Redis needed).
+
+### Recommended hosts
+
+- **App (Node/Express + SPA):** one persistent web service (e.g. Render Web Service, Railway, Fly.io) — not serverless, because the backend uses long-lived sessions and disk uploads.
+- **Database:** a managed PostgreSQL the app can reach directly (e.g. Render Postgres, Neon, Supabase) — set `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` (production DB config enables SSL automatically).
+
+### Required production environment variables
+
+| Variable | Purpose |
+|----------|---------|
+| `NODE_ENV=production` | Secure cookies, trust-proxy, static SPA serving |
+| `PORT` | Set by the platform (Render injects it) |
+| `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` | Managed PostgreSQL credentials |
+| `SESSION_SECRET_KEY` | Session signing secret (server refuses to start without it) |
+| `CLIENT_URL` | The app's public HTTPS origin — used for credentialed CORS |
+
+No frontend build variable is required for the same-origin deployment (`/api` and `/auth` are relative). If you intentionally split the frontend to another origin, build it with `REACT_APP_API_BASE_URL=https://<api-host>/api` and set `CLIENT_URL` to the frontend origin.
+
+### Provisioning the database (safe)
+
+```bash
+cd backend
+npm run seed:demo
+```
+
+`seed:demo` is **non-destructive**: it applies `schema.sql` only if the database is empty, applies the idempotent migrations, validates all 16 tables, and seeds the Arabic/English demo data only if no properties exist yet. It never drops existing data and can be run repeatedly.
+
+> **Warning:** never run `npm run seed` against production — it drops and recreates every table.
+
+### HR Demo Accounts
+
+These are the intentionally non-sensitive demo credentials seeded by `npm run seed:demo`:
+
+| Role | Email | Password |
+|------|-------|----------|
+| Admin (HR demo) | `admin@aqarweb.com` | `Admin@12345` |
+| Regular user (HR demo) | `ahmed.alkhatib@email.com` | `0923lkldspp3$%#39;ld0-2` |
+
+All other seeded clients/agents share the same dev-only password. No real credentials are used anywhere in the seed data.
+
+### Uploads storage limitation
+
+Administrator-uploaded property images (Multer) write to the server's local `uploads/` directory. On free tiers this filesystem can be ephemeral (files may disappear on redeploy/restart). **Seeded demo images are not affected** — they are absolute external URLs (Cloudinary) and keep working regardless of storage. For durable admin uploads, use a paid plan with a persistent disk or back uploads with object storage.
+
+### Health check
+
+`GET /health` returns `200 {"success":true,"status":"ok"}` without exposing any internals.
 
 ## Linting
 

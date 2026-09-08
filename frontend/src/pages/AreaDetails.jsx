@@ -2,13 +2,11 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../styles/realestate.css";
 import { getListings } from "../api/api";
-import { normalizeListings } from "../api/normalize";
-import fallbackProperties from "../data/fallbackProperties";
+import { FALLBACK_LISTINGS } from "../data/fallbackListings";
 import PropertyCard from "../components/PropertyCard";
 import StateNotice from "../components/StateNotice";
+import SEO from "../components/SEO.jsx";
 import { formatPrice } from "../utils/formatPrice";
-
-const FALLBACK_LISTINGS = normalizeListings(fallbackProperties);
 
 const POINTS_OF_INTEREST = [
   "مدارس وجامعات قريبة",
@@ -87,6 +85,10 @@ export default function AreaDetails() {
 
   return (
     <div className="re-scope area-details-page">
+      <SEO
+        title={areaName ? `عقارات في ${areaName}` : "دليل المناطق"}
+        description={`عقارات للبيع والإيجار في ${areaName} في مصر — تعرف على الأسعار واتجاهات السوق وأبرز المناطق الشائعة.`}
+      />
       <section className="area-details-hero">
         <div className="container">
           <span className="re-eyebrow">دليل المناطق</span>

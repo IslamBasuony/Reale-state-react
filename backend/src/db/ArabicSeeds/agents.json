@@ -6,7 +6,7 @@
     "email": "sara.almansouri@estatearabia.com",
     "password": "0923lkldspp3$%#39;ld0-2",
     "bio": "خبيرة في العقارات الفاخرة ولديها أكثر من 15 سنة خبرة في السوق العقاري الراقي.",
-    "profile_image_url": "https://example.com/images/sara-almansouri.jpg",
+    "profile_image_url": "https://randomuser.me/api/portraits/women/44.jpg",
     "is_active": true
   },
   {
@@ -17,7 +17,7 @@
     "password": "0923lkldspp3$%#39;ld0-2",
 
     "bio": "متخصص في العقارات التجارية وفرص الاستثمار في المشاريع الكبرى.",
-    "profile_image_url": "https://example.com/images/khaled-alotaibi.jpg",
+    "profile_image_url": "https://randomuser.me/api/portraits/men/32.jpg",
     "is_active": true
   },
   {
@@ -28,7 +28,7 @@
     "password": "0923lkldspp3$%#39;ld0-2",
 
     "bio": "تركز على العقارات السكنية ومساعدة المشترين لأول مرة في إيجاد منازل أحلامهم.",
-    "profile_image_url": "https://example.com/images/reem-alzahrani.jpg",
+    "profile_image_url": "https://randomuser.me/api/portraits/women/68.jpg",
     "is_active": true
   },
   {
@@ -39,7 +39,7 @@
     "password": "0923lkldspp3$%#39;ld0-2",
 
     "bio": "وكيل عقاري ذو خبرة واسعة في تطوير وتجديد العقارات في المدن الكبرى.",
-    "profile_image_url": "https://example.com/images/yasser-almasri.jpg",
+    "profile_image_url": "https://randomuser.me/api/portraits/men/75.jpg",
     "is_active": false
   },
   {
@@ -50,7 +50,7 @@
     "password": "0923lkldspp3$%#39;ld0-2",
 
     "bio": "متخصصة في العقارات الساحلية والمنازل ذات الإطلالات المميزة.",
-    "profile_image_url": "https://example.com/images/noura-alharbi.jpg",
+    "profile_image_url": "https://randomuser.me/api/portraits/women/65.jpg",
     "is_active": true
   }
 ]

@@ -1,8 +1,7 @@
 import { executeQuery } from "../utils/dbHelpers.js";
 import crypto from "crypto";
-import bcrypt from "bcrypt";
+import { hashPassword } from "../utils/password.js";
 
-const SALT_ROUNDS = 10;
 const TOKEN_EXPIRY_MINUTES = 30;
 
 const hashToken = (token) =>
@@ -52,7 +51,7 @@ const resetPassword = async (token, newPassword) => {
   const record = await verifyToken(token);
   if (!record) return null;
 
-  const hashedPassword = await bcrypt.hash(newPassword, SALT_ROUNDS);
+  const hashedPassword = await hashPassword(newPassword);
   await executeQuery(
     `UPDATE clients SET password = $1 WHERE id = $2`,
     [hashedPassword, record.user_id],

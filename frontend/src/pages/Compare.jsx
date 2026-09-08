@@ -2,13 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/realestate.css";
 import { getListings } from "../api/api";
-import { normalizeListings } from "../api/normalize";
-import fallbackProperties from "../data/fallbackProperties";
 import StateNotice from "../components/StateNotice";
+import { FALLBACK_LISTINGS } from "../data/fallbackListings";
 import { formatPrice, purposeLabel } from "../utils/formatPrice";
 import SEO from "../components/SEO.jsx";
 
-const FALLBACK_LISTINGS = normalizeListings(fallbackProperties);
 const STORAGE_KEY = "realEstateCompare";
 const MAX_COMPARE = 3;
 

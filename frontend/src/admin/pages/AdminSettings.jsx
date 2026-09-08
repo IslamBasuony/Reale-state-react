@@ -137,20 +137,20 @@ export default function AdminSettings() {
           <form className="admin-form" onSubmit={handleProfileSave}>
             <div className="admin-form-grid">
               <div className="admin-form-group">
-                <label>الاسم الأول *</label>
-                <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required maxLength={50} />
+                <label htmlFor="adms-first-name">الاسم الأول *</label>
+                <input id="adms-first-name" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required maxLength={50} />
               </div>
               <div className="admin-form-group">
-                <label>الاسم الأخير *</label>
-                <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} required maxLength={50} />
+                <label htmlFor="adms-last-name">الاسم الأخير *</label>
+                <input id="adms-last-name" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} required maxLength={50} />
               </div>
               <div className="admin-form-group">
-                <label>البريد الإلكتروني *</label>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                <label htmlFor="adms-email">البريد الإلكتروني *</label>
+                <input id="adms-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
               </div>
               <div className="admin-form-group">
-                <label>رقم الهاتف *</label>
-                <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+                <label htmlFor="adms-phone">رقم الهاتف *</label>
+                <input id="adms-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required />
               </div>
             </div>
             <div className="admin-form-actions">
@@ -177,19 +177,19 @@ export default function AdminSettings() {
           <form className="admin-form" onSubmit={handlePasswordChange}>
             <div className="admin-form-grid">
               <div className="admin-form-group admin-form-group--full">
-                <label>كلمة المرور الحالية *</label>
-                <input type="password" value={currentPw} onChange={(e) => setCurrentPw(e.target.value)} required autoComplete="current-password" />
+                <label htmlFor="adms-current-password">كلمة المرور الحالية *</label>
+                <input id="adms-current-password" type="password" value={currentPw} onChange={(e) => setCurrentPw(e.target.value)} required autoComplete="current-password" />
               </div>
               <div className="admin-form-group admin-form-group--full">
-                <label>كلمة المرور الجديدة *</label>
-                <input type="password" value={newPw} onChange={(e) => setNewPw(e.target.value)} required autoComplete="new-password" />
-                <span className="admin-input-hint">
+                <label htmlFor="adms-new-password">كلمة المرور الجديدة *</label>
+                <input id="adms-new-password" type="password" value={newPw} onChange={(e) => setNewPw(e.target.value)} required autoComplete="new-password" aria-describedby="adms-password-hint" />
+                <span id="adms-password-hint" className="admin-input-hint">
                   8 أحرف على الأقل، حرف كبير + حرف صغير + رقم + حرف خاص (@$!%*?&)
                 </span>
               </div>
               <div className="admin-form-group admin-form-group--full">
-                <label>تأكيد كلمة المرور الجديدة *</label>
-                <input type="password" value={confirmPw} onChange={(e) => setConfirmPw(e.target.value)} required autoComplete="new-password" />
+                <label htmlFor="adms-confirm-password">تأكيد كلمة المرور الجديدة *</label>
+                <input id="adms-confirm-password" type="password" value={confirmPw} onChange={(e) => setConfirmPw(e.target.value)} required autoComplete="new-password" />
               </div>
             </div>
             <div className="admin-form-actions">

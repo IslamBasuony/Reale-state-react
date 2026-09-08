@@ -5,6 +5,7 @@ import { useListings } from "../context/ListingsContext";
 import PropertyCard from "../components/PropertyCard";
 import { normalizeListings } from "../api/normalize.js";
 import fallbackProperties from "../data/fallbackProperties";
+import { PRICE_RANGES } from "../utils/priceRange";
 import SEO from "../components/SEO.jsx";
 import JsonLd from "../components/JsonLd.jsx";
 
@@ -16,12 +17,6 @@ const categories = [
 ];
 
 const TYPE_OPTIONS = ["شقة", "فيلا", "مكتب"];
-
-const PRICE_RANGES = [
-  "حتى مليون جنيه",
-  "1 – 2 مليون جنيه",
-  "أكتر من 2 مليون جنيه",
-];
 
 /* Fallback featured cards — derived from the single fallback data source
    (never a separate dataset), keeping the original sale/rent hero mix. */
@@ -245,8 +240,8 @@ const Home = () => {
                 defaultValue="">
                 <option value="">أي سعر</option>
                 {PRICE_RANGES.map((range) => (
-                  <option key={range} value={range}>
-                    {range}
+                  <option key={range.value} value={range.value}>
+                    {range.value}
                   </option>
                 ))}
               </select>

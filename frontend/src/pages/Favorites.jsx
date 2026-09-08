@@ -2,14 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/realestate.css";
 import { getListings } from "../api/api";
-import { normalizeListings } from "../api/normalize";
-import fallbackProperties from "../data/fallbackProperties";
 import { useFavorites } from "../context/FavoritesContext";
+import { FALLBACK_LISTINGS } from "../data/fallbackListings";
 import PropertyCard from "../components/PropertyCard";
 import StateNotice from "../components/StateNotice";
 import SEO from "../components/SEO.jsx";
-
-const FALLBACK_LISTINGS = normalizeListings(fallbackProperties);
 
 export default function Favorites() {
   const { favorites, clearFavorites } = useFavorites();

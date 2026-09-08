@@ -1,26 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "../styles/realestate.css";
-import { normalizeListings } from "../api/normalize";
-import fallbackProperties from "../data/fallbackProperties";
 import PropertyCard from "../components/PropertyCard";
 import StateNotice from "../components/StateNotice";
 import { useListings } from "../context/ListingsContext";
+import { FALLBACK_LISTINGS } from "../data/fallbackListings";
+import { getPriceRange } from "../utils/priceRange";
 import SEO from "../components/SEO.jsx";
 
-const FALLBACK_LISTINGS = normalizeListings(fallbackProperties);
 const PAGE_SIZE = 9;
-
-const PRICE_RANGES = [
-  { value: "حتى مليون جنيه", min: "", max: "1000000" },
-  { value: "1 – 2 مليون جنيه", min: "1000000", max: "2000000" },
-  { value: "أكتر من 2 مليون جنيه", min: "2000000", max: "" },
-];
-
-const getPriceRange = (value) => {
-  const match = PRICE_RANGES.find((range) => range.value === value);
-  return match ?? { min: "", max: "" };
-};
 
 const PROPERTY_TYPES = ["شقة", "فيلا", "دوبلكس", "بنتهاوس", "استوديو", "مكتب", "محل", "مخزن", "أرض"];
 

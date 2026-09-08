@@ -244,26 +244,26 @@ export default function AdminPropertyForm() {
       <form className="admin-form" onSubmit={handleSubmit}>
         <div className="admin-form-grid">
           <div className="admin-form-group admin-form-group--full">
-            <label>العنوان *</label>
-            <input type="text" value={form.title} onChange={set("title")} required maxLength={255} />
+            <label htmlFor="apf-title">العنوان *</label>
+            <input id="apf-title" type="text" value={form.title} onChange={set("title")} required maxLength={255} />
           </div>
 
           <div className="admin-form-group">
-            <label>السعر *</label>
-            <input type="number" value={form.price} onChange={set("price")} min="1" step="any" required />
+            <label htmlFor="apf-price">السعر *</label>
+            <input id="apf-price" type="number" value={form.price} onChange={set("price")} min="1" step="any" required />
           </div>
 
           <div className="admin-form-group">
-            <label>العملة</label>
-            <select value={form.currency} onChange={set("currency")}>
+            <label htmlFor="apf-currency">العملة</label>
+            <select id="apf-currency" value={form.currency} onChange={set("currency")}>
               <option value="EGP">ج.م (EGP)</option>
               <option value="USD">$ (USD)</option>
             </select>
           </div>
 
           <div className="admin-form-group">
-            <label>فترة السعر</label>
-            <select value={form.price_period} onChange={set("price_period")}>
+            <label htmlFor="apf-price-period">فترة السعر</label>
+            <select id="apf-price-period" value={form.price_period} onChange={set("price_period")}>
               <option value="monthly">شهري</option>
               <option value="yearly">سنوي</option>
               <option value="one_time">دفعة واحدة</option>
@@ -271,8 +271,8 @@ export default function AdminPropertyForm() {
           </div>
 
           <div className="admin-form-group">
-            <label>نوع العقار *</label>
-            <select value={form.type} onChange={set("type")} required>
+            <label htmlFor="apf-type">نوع العقار *</label>
+            <select id="apf-type" value={form.type} onChange={set("type")} required>
               {PROPERTY_TYPES.map((t) => (
                 <option key={t.value} value={t.value}>{t.label}</option>
               ))}
@@ -280,16 +280,16 @@ export default function AdminPropertyForm() {
           </div>
 
           <div className="admin-form-group">
-            <label>الغرض *</label>
-            <select value={form.purpose} onChange={set("purpose")} required>
+            <label htmlFor="apf-purpose">الغرض *</label>
+            <select id="apf-purpose" value={form.purpose} onChange={set("purpose")} required>
               <option value="sale">بيع</option>
               <option value="rent">إيجار</option>
             </select>
           </div>
 
           <div className="admin-form-group">
-            <label>الحالة</label>
-            <select value={form.status} onChange={set("status")}>
+            <label htmlFor="apf-status">الحالة</label>
+            <select id="apf-status" value={form.status} onChange={set("status")}>
               <option value="available">متاح</option>
               <option value="sold">مباع</option>
               <option value="rented">مُستأجر</option>
@@ -297,61 +297,61 @@ export default function AdminPropertyForm() {
           </div>
 
           <div className="admin-form-group">
-            <label>اللغة *</label>
-            <select value={form.lang} onChange={set("lang")} required>
+            <label htmlFor="apf-lang">اللغة *</label>
+            <select id="apf-lang" value={form.lang} onChange={set("lang")} required>
               <option value="ar">عربي</option>
               <option value="en">إنجليزي</option>
             </select>
           </div>
 
           <div className="admin-form-group admin-form-group--full">
-            <label>العنوان الفعلي *</label>
-            <input type="text" value={form.address} onChange={set("address")} required maxLength={255} />
+            <label htmlFor="apf-address">العنوان الفعلي *</label>
+            <input id="apf-address" type="text" value={form.address} onChange={set("address")} required maxLength={255} />
           </div>
 
           <div className="admin-form-group admin-form-group--full">
-            <label>الوصف</label>
-            <textarea value={form.description} onChange={set("description")} rows={4} />
+            <label htmlFor="apf-description">الوصف</label>
+            <textarea id="apf-description" value={form.description} onChange={set("description")} rows={4} />
           </div>
 
           <div className="admin-form-group">
-            <label>غرف النوم</label>
-            <input type="number" value={form.bedrooms_number} onChange={set("bedrooms_number")} min="0" />
+            <label htmlFor="apf-bedrooms">غرف النوم</label>
+            <input id="apf-bedrooms" type="number" value={form.bedrooms_number} onChange={set("bedrooms_number")} min="0" />
           </div>
 
           <div className="admin-form-group">
-            <label>دورات المياه</label>
-            <input type="number" value={form.bathrooms_number} onChange={set("bathrooms_number")} min="0" />
+            <label htmlFor="apf-bathrooms">دورات المياه</label>
+            <input id="apf-bathrooms" type="number" value={form.bathrooms_number} onChange={set("bathrooms_number")} min="0" />
           </div>
 
           <div className="admin-form-group">
-            <label>المساحة (م²)</label>
-            <input type="number" value={form.area_size} onChange={set("area_size")} min="0" step="any" />
+            <label htmlFor="apf-area-size">المساحة (م²)</label>
+            <input id="apf-area-size" type="number" value={form.area_size} onChange={set("area_size")} min="0" step="any" />
           </div>
 
           <div className="admin-form-group">
-            <label>مواقف السيارات</label>
-            <input type="number" value={form.parking_spaces} onChange={set("parking_spaces")} min="0" />
+            <label htmlFor="apf-parking">مواقف السيارات</label>
+            <input id="apf-parking" type="number" value={form.parking_spaces} onChange={set("parking_spaces")} min="0" />
           </div>
 
           <div className="admin-form-group">
-            <label>رقم الطابق</label>
-            <input type="number" value={form.floor_number} onChange={set("floor_number")} min="0" />
+            <label htmlFor="apf-floor-number">رقم الطابق</label>
+            <input id="apf-floor-number" type="number" value={form.floor_number} onChange={set("floor_number")} min="0" />
           </div>
 
           <div className="admin-form-group">
-            <label>إجمالي الطوابق</label>
-            <input type="number" value={form.total_floors} onChange={set("total_floors")} min="0" />
+            <label htmlFor="apf-total-floors">إجمالي الطوابق</label>
+            <input id="apf-total-floors" type="number" value={form.total_floors} onChange={set("total_floors")} min="0" />
           </div>
 
           <div className="admin-form-group">
-            <label>الوسيط *</label>
+            <label htmlFor="apf-agent-id">الوسيط *</label>
             {agentsError ? (
               <span className="admin-alert admin-alert--error" style={{ padding: "8px 12px" }}>
                 تعذر تحميل قائمة الوكلاء
               </span>
             ) : (
-              <select value={form.agent_id} onChange={set("agent_id")} required>
+              <select id="apf-agent-id" value={form.agent_id} onChange={set("agent_id")} required>
                 <option value="">— اختر وسيطًا —</option>
                 {agents.map((a) => (
                   <option key={a.id} value={a.id}>{a.first_name} {a.last_name}</option>

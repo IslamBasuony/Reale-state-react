@@ -1,8 +1,14 @@
-/* =========================================
-   SALE PAGE
-========================================= */
+/* =====================================================
+   LISTING PAGE (shared by Sale + Rent)
+   -----------------------------------------------------
+   Sale and Rent share an identical page layout. Both
+   pages use their own prefixed class names (sale-* /
+   rent-*); this single stylesheet groups each selector
+   pair so the styles are defined once.
+===================================================== */
 
-.sale-page-wrapper {
+.sale-page-wrapper,
+.rent-page-wrapper {
   direction: rtl;
   width: 100%;
   min-height: 100vh;
@@ -11,24 +17,26 @@
   font-family: "Tajawal", sans-serif;
 }
 
-
 /* =========================================
    HERO
 ========================================= */
 
-.sale-hero-section {
+.sale-hero-section,
+.rent-hero-section {
   width: 100%;
   padding: 65px 20px 45px;
   background: var(--white);
 }
 
-.sale-hero-content {
+.sale-hero-content,
+.rent-hero-content {
   width: min(1180px, 100%);
   margin: 0 auto;
   text-align: center;
 }
 
-.sale-hero-label {
+.sale-hero-label,
+.rent-hero-label {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +46,8 @@
   font-weight: 700;
 }
 
-.sale-hero-title {
+.sale-hero-title,
+.rent-hero-title {
   margin: 0;
   color: #151515;
   font-size: 42px;
@@ -46,7 +55,8 @@
   font-weight: 800;
 }
 
-.sale-hero-description {
+.sale-hero-description,
+.rent-hero-description {
   max-width: 650px;
   margin: 16px auto 0;
   color: #777777;
@@ -54,17 +64,18 @@
   line-height: 1.9;
 }
 
-
 /* =========================================
    SEARCH SECTION
 ========================================= */
 
-.sale-search-section {
+.sale-search-section,
+.rent-search-section {
   width: 100%;
   padding: 0 20px 65px;
 }
 
-.sale-search-form {
+.sale-search-form,
+.rent-search-form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
@@ -81,24 +92,29 @@
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
 }
 
-.sale-search-field {
+.sale-search-field,
+.rent-search-field {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.sale-search-field-wide {
+.sale-search-field-wide,
+.rent-search-field-wide {
   grid-column: span 2;
 }
 
-.sale-search-label {
+.sale-search-label,
+.rent-search-label {
   color: #3d3d3d;
   font-size: 14px;
   font-weight: 700;
 }
 
 .sale-search-field input,
-.sale-search-field select {
+.sale-search-field select,
+.rent-search-field input,
+.rent-search-field select {
   width: 100%;
   height: 50px;
 
@@ -121,17 +137,21 @@
 }
 
 .sale-search-field input:focus,
-.sale-search-field select:focus {
+.sale-search-field select:focus,
+.rent-search-field input:focus,
+.rent-search-field select:focus {
   border-color: var(--brand);
   box-shadow: 0 0 0 3px rgba(54, 176, 149, 0.1);
 }
 
-.sale-search-input-wrapper {
+.sale-search-input-wrapper,
+.rent-search-input-wrapper {
   position: relative;
   width: 100%;
 }
 
-.sale-search-input-wrapper svg {
+.sale-search-input-wrapper svg,
+.rent-search-input-wrapper svg {
   position: absolute;
   top: 50%;
   right: 15px;
@@ -143,11 +163,13 @@
   pointer-events: none;
 }
 
-.sale-search-input-wrapper input {
+.sale-search-input-wrapper input,
+.rent-search-input-wrapper input {
   padding-right: 42px;
 }
 
-.sale-search-submit {
+.sale-search-submit,
+.rent-search-submit {
   align-self: end;
 
   display: flex;
@@ -175,23 +197,25 @@
     transform 0.2s ease;
 }
 
-.sale-search-submit:hover {
+.sale-search-submit:hover,
+.rent-search-submit:hover {
   background: #2e9e86;
   transform: translateY(-1px);
 }
-
 
 /* =========================================
    LISTINGS SECTION
 ========================================= */
 
-.sale-listings-section {
+.sale-listings-section,
+.rent-listings-section {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
   padding-bottom: 60px;
 }
 
-.sale-listings-heading {
+.sale-listings-heading,
+.rent-listings-heading {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -201,7 +225,8 @@
   margin-bottom: 25px;
 }
 
-.sale-listings-label {
+.sale-listings-label,
+.rent-listings-label {
   display: block;
 
   margin-bottom: 7px;
@@ -212,7 +237,8 @@
   font-weight: 700;
 }
 
-.sale-listings-title {
+.sale-listings-title,
+.rent-listings-title {
   margin: 0;
 
   color: #171717;
@@ -222,17 +248,18 @@
   font-weight: 800;
 }
 
-.sale-results-count {
+.sale-results-count,
+.rent-results-count {
   color: #777777;
   font-size: 14px;
 }
-
 
 /* =========================================
    PROPERTY TYPE TABS
 ========================================= */
 
-.sale-type-tabs {
+.sale-type-tabs,
+.rent-type-tabs {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -242,11 +269,13 @@
   scrollbar-width: none;
 }
 
-.sale-type-tabs::-webkit-scrollbar {
+.sale-type-tabs::-webkit-scrollbar,
+.rent-type-tabs::-webkit-scrollbar {
   display: none;
 }
 
-.sale-type-tab {
+.sale-type-tab,
+.rent-type-tab {
   flex-shrink: 0;
   min-width: auto;
   height: 38px;
@@ -265,23 +294,30 @@
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.sale-type-tab:hover {
+.sale-type-tab:hover,
+.rent-type-tab:hover {
   border-color: var(--brand);
   color: var(--brand);
 }
 
-.sale-type-tab-active {
+.sale-type-tab-active,
+.rent-type-tab-active {
   border-color: var(--brand);
   background: var(--brand);
   color: var(--white);
 }
 
+.sale-type-tab i,
+.rent-type-tab i {
+  margin-inline-end: 4px;
+}
 
 /* =========================================
    PROPERTY GRID
 ========================================= */
 
-.sale-properties-grid {
+.sale-properties-grid,
+.rent-properties-grid {
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
@@ -289,12 +325,12 @@
   gap: 24px;
 }
 
-
 /* =========================================
    PROPERTY CARD
 ========================================= */
 
-.sale-property-card {
+.sale-property-card,
+.rent-property-card {
   overflow: hidden;
 
   border: 1px solid #e8e8e8;
@@ -309,18 +345,19 @@
     box-shadow 0.25s ease;
 }
 
-.sale-property-card:hover {
+.sale-property-card:hover,
+.rent-property-card:hover {
   transform: translateY(-5px);
 
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
 }
 
-
 /* =========================================
    PROPERTY IMAGE
 ========================================= */
 
-.sale-property-media {
+.sale-property-media,
+.rent-property-media {
   position: relative;
 
   width: 100%;
@@ -331,7 +368,8 @@
   background: #eeeeee;
 }
 
-.sale-property-media img {
+.sale-property-media img,
+.rent-property-media img {
   display: block;
 
   width: 100%;
@@ -342,16 +380,17 @@
   transition: transform 0.4s ease;
 }
 
-.sale-property-card:hover .sale-property-media img {
+.sale-property-card:hover .sale-property-media img,
+.rent-property-card:hover .rent-property-media img {
   transform: scale(1.045);
 }
-
 
 /* =========================================
    PROPERTY BADGE
 ========================================= */
 
-.sale-property-badge {
+.sale-property-badge,
+.rent-property-badge {
   position: absolute;
 
   top: 14px;
@@ -375,12 +414,17 @@
   font-weight: 700;
 }
 
+/* Sale badge is narrower than the rent badge */
+.rent-property-badge {
+  min-width: 65px;
+}
 
 /* =========================================
    PROPERTY ACTIONS
 ========================================= */
 
-.sale-property-actions {
+.sale-property-actions,
+.rent-property-actions {
   position: absolute;
 
   top: 14px;
@@ -392,7 +436,8 @@
   gap: 7px;
 }
 
-.sale-property-icon {
+.sale-property-icon,
+.rent-property-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -416,28 +461,31 @@
     transform 0.2s ease;
 }
 
-.sale-property-icon:hover {
+.sale-property-icon:hover,
+.rent-property-icon:hover {
   background: var(--brand);
   color: var(--white);
 
   transform: translateY(-1px);
 }
 
-.sale-property-icon-favorite {
+.sale-property-icon-favorite,
+.rent-property-icon-favorite {
   background: var(--brand);
   color: var(--white);
 }
-
 
 /* =========================================
    PROPERTY BODY
 ========================================= */
 
-.sale-property-body {
+.sale-property-body,
+.rent-property-body {
   padding: 20px;
 }
 
-.sale-property-type {
+.sale-property-type,
+.rent-property-type {
   display: inline-block;
 
   margin-bottom: 7px;
@@ -448,7 +496,8 @@
   font-weight: 700;
 }
 
-.sale-property-title {
+.sale-property-title,
+.rent-property-title {
   min-height: 52px;
 
   margin: 0 0 10px;
@@ -460,12 +509,12 @@
   font-weight: 800;
 }
 
-
 /* =========================================
    LOCATION
 ========================================= */
 
-.sale-property-location {
+.sale-property-location,
+.rent-property-location {
   display: flex;
   align-items: center;
 
@@ -478,18 +527,19 @@
   font-size: 13px;
 }
 
-.sale-property-location svg {
+.sale-property-location svg,
+.rent-property-location svg {
   flex-shrink: 0;
 
   color: var(--brand);
 }
 
-
 /* =========================================
    PROPERTY META
 ========================================= */
 
-.sale-property-meta {
+.sale-property-meta,
+.rent-property-meta {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -506,11 +556,13 @@
   font-size: 12px;
 }
 
-.sale-property-meta span {
+.sale-property-meta span,
+.rent-property-meta span {
   position: relative;
 }
 
-.sale-property-meta span:not(:last-child)::after {
+.sale-property-meta span:not(:last-child)::after,
+.rent-property-meta span:not(:last-child)::after {
   content: "";
 
   position: absolute;
@@ -528,12 +580,12 @@
   transform: translateY(-50%);
 }
 
-
 /* =========================================
    PROPERTY FOOTER
 ========================================= */
 
-.sale-property-footer {
+.sale-property-footer,
+.rent-property-footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -543,20 +595,23 @@
   padding-top: 17px;
 }
 
-.sale-property-price-box {
+.sale-property-price-box,
+.rent-property-price-box {
   display: flex;
   flex-direction: column;
 
   gap: 4px;
 }
 
-.sale-property-price-label {
+.sale-property-price-label,
+.rent-property-price-label {
   color: #888888;
 
   font-size: 11px;
 }
 
-.sale-property-price {
+.sale-property-price,
+.rent-property-price {
   color: var(--brand);
 
   font-size: 17px;
@@ -564,12 +619,12 @@
   white-space: nowrap;
 }
 
-
 /* =========================================
    DETAILS BUTTON
 ========================================= */
 
-.sale-property-details-button {
+.sale-property-details-button,
+.rent-property-details-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -594,17 +649,18 @@
     color 0.2s ease;
 }
 
-.sale-property-details-button:hover {
+.sale-property-details-button:hover,
+.rent-property-details-button:hover {
   background: var(--brand);
   color: var(--white);
 }
-
 
 /* =========================================
    EMPTY RESULTS
 ========================================= */
 
-.sale-empty-results {
+.sale-empty-results,
+.rent-empty-results {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -620,7 +676,8 @@
   text-align: center;
 }
 
-.sale-empty-icon {
+.sale-empty-icon,
+.rent-empty-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -636,7 +693,8 @@
   color: var(--brand);
 }
 
-.sale-empty-results h3 {
+.sale-empty-results h3,
+.rent-empty-results h3 {
   margin: 0 0 8px;
 
   color: #222222;
@@ -645,7 +703,8 @@
   font-weight: 800;
 }
 
-.sale-empty-results p {
+.sale-empty-results p,
+.rent-empty-results p {
   margin: 0 0 20px;
 
   color: #777777;
@@ -653,7 +712,8 @@
   font-size: 14px;
 }
 
-.sale-empty-results button {
+.sale-empty-results button,
+.rent-empty-results button {
   height: 40px;
 
   padding: 0 18px;
@@ -671,12 +731,12 @@
   cursor: pointer;
 }
 
-
 /* =========================================
    PAGINATION
 ========================================= */
 
-.sale-pagination {
+.sale-pagination,
+.rent-pagination {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -687,7 +747,9 @@
 }
 
 .sale-pagination-number,
-.sale-pagination-arrow {
+.sale-pagination-arrow,
+.rent-pagination-number,
+.rent-pagination-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -716,33 +778,38 @@
 }
 
 .sale-pagination-number:hover,
-.sale-pagination-arrow:hover:not(:disabled) {
+.sale-pagination-arrow:hover:not(:disabled),
+.rent-pagination-number:hover,
+.rent-pagination-arrow:hover:not(:disabled) {
   border-color: var(--brand);
   color: var(--brand);
 }
 
-.sale-pagination-number-active {
+.sale-pagination-number-active,
+.rent-pagination-number-active {
   border-color: var(--brand);
   background: var(--brand);
   color: var(--white);
 }
 
-.sale-pagination-arrow {
+.sale-pagination-arrow,
+.rent-pagination-arrow {
   font-size: 21px;
   line-height: 1;
 }
 
-.sale-pagination-arrow:disabled {
+.sale-pagination-arrow:disabled,
+.rent-pagination-arrow:disabled {
   opacity: 0.35;
   cursor: not-allowed;
 }
-
 
 /* =========================================
    NEWSLETTER
 ========================================= */
 
-.sale-newsletter-section {
+.sale-newsletter-section,
+.rent-newsletter-section {
   width: 100%;
 
   padding: 65px 20px;
@@ -750,14 +817,16 @@
   background: #f5faf8;
 }
 
-.sale-newsletter-content {
+.sale-newsletter-content,
+.rent-newsletter-content {
   width: min(850px, 100%);
   margin: 0 auto;
 
   text-align: center;
 }
 
-.sale-newsletter-title {
+.sale-newsletter-title,
+.rent-newsletter-title {
   margin: 0 0 10px;
 
   color: #1b1b1b;
@@ -767,7 +836,8 @@
   font-weight: 800;
 }
 
-.sale-newsletter-description {
+.sale-newsletter-description,
+.rent-newsletter-description {
   max-width: 650px;
 
   margin: 0 auto 25px;
@@ -778,7 +848,8 @@
   line-height: 1.9;
 }
 
-.sale-newsletter-form {
+.sale-newsletter-form,
+.rent-newsletter-form {
   display: flex;
   align-items: center;
 
@@ -794,7 +865,8 @@
   background: var(--white);
 }
 
-.sale-newsletter-form input {
+.sale-newsletter-form input,
+.rent-newsletter-form input {
   flex: 1;
 
   min-width: 0;
@@ -814,7 +886,8 @@
   font-size: 14px;
 }
 
-.sale-newsletter-form button {
+.sale-newsletter-form button,
+.rent-newsletter-form button {
   flex-shrink: 0;
 
   height: 45px;
@@ -836,63 +909,69 @@
   transition: background 0.2s ease;
 }
 
-.sale-newsletter-form button:hover {
+.sale-newsletter-form button:hover,
+.rent-newsletter-form button:hover {
   background: #2e9e86;
 }
-
 
 /* =========================================
    TABLET
 ========================================= */
 
 @media (max-width: 1000px) {
-
-  .sale-hero-title {
+  .sale-hero-title,
+  .rent-hero-title {
     font-size: 36px;
   }
 
-  .sale-search-form {
+  .sale-search-form,
+  .rent-search-form {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .sale-search-field-wide {
+  .sale-search-field-wide,
+  .rent-search-field-wide {
     grid-column: span 2;
   }
 
-  .sale-search-submit {
+  .sale-search-submit,
+  .rent-search-submit {
     grid-column: span 2;
   }
 
-  .sale-properties-grid {
+  .sale-properties-grid,
+  .rent-properties-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
-
 
 /* =========================================
    MOBILE
 ========================================= */
 
 @media (max-width: 700px) {
-
-  .sale-hero-section {
+  .sale-hero-section,
+  .rent-hero-section {
     padding: 45px 15px 35px;
   }
 
-  .sale-hero-title {
+  .sale-hero-title,
+  .rent-hero-title {
     font-size: 30px;
   }
 
-  .sale-hero-description {
+  .sale-hero-description,
+  .rent-hero-description {
     font-size: 14px;
   }
 
-  .sale-search-section {
+  .sale-search-section,
+  .rent-search-section {
     padding: 0 15px 45px;
   }
 
-  .sale-search-form {
+  .sale-search-form,
+  .rent-search-form {
     grid-template-columns: 1fr;
 
     padding: 20px;
@@ -901,44 +980,54 @@
   }
 
   .sale-search-field-wide,
-  .sale-search-submit {
+  .sale-search-submit,
+  .rent-search-field-wide,
+  .rent-search-submit {
     grid-column: span 1;
   }
 
-  .sale-listings-section {
+  .sale-listings-section,
+  .rent-listings-section {
     width: calc(100% - 30px);
   }
 
-  .sale-listings-heading {
+  .sale-listings-heading,
+  .rent-listings-heading {
     align-items: flex-start;
     flex-direction: column;
 
     gap: 10px;
   }
 
-  .sale-listings-title {
+  .sale-listings-title,
+  .rent-listings-title {
     font-size: 24px;
   }
 
-  .sale-properties-grid {
+  .sale-properties-grid,
+  .rent-properties-grid {
     grid-template-columns: 1fr;
 
     gap: 18px;
   }
 
-  .sale-property-media {
+  .sale-property-media,
+  .rent-property-media {
     height: 225px;
   }
 
-  .sale-newsletter-section {
+  .sale-newsletter-section,
+  .rent-newsletter-section {
     padding: 50px 15px;
   }
 
-  .sale-newsletter-title {
+  .sale-newsletter-title,
+  .rent-newsletter-title {
     font-size: 23px;
   }
 
-  .sale-newsletter-form {
+  .sale-newsletter-form,
+  .rent-newsletter-form {
     flex-direction: column;
 
     gap: 7px;
@@ -946,69 +1035,77 @@
     padding: 7px;
   }
 
-  .sale-newsletter-form input {
+  .sale-newsletter-form input,
+  .rent-newsletter-form input {
     width: 100%;
   }
 
-  .sale-newsletter-form button {
+  .sale-newsletter-form button,
+  .rent-newsletter-form button {
     width: 100%;
   }
-
 }
-
 
 /* =========================================
    SMALL MOBILE
 ========================================= */
 
 @media (max-width: 450px) {
-
-  .sale-hero-title {
+  .sale-hero-title,
+  .rent-hero-title {
     font-size: 26px;
   }
 
-  .sale-hero-description {
+  .sale-hero-description,
+  .rent-hero-description {
     font-size: 13px;
   }
 
-  .sale-search-form {
+  .sale-search-form,
+  .rent-search-form {
     padding: 16px;
   }
 
-  .sale-type-tabs {
+  .sale-type-tabs,
+  .rent-type-tabs {
     margin-left: -5px;
     margin-right: -5px;
     padding: 0 5px;
   }
 
-  .sale-property-body {
+  .sale-property-body,
+  .rent-property-body {
     padding: 16px;
   }
 
-  .sale-property-title {
+  .sale-property-title,
+  .rent-property-title {
     min-height: auto;
 
     font-size: 16px;
   }
 
-  .sale-property-footer {
+  .sale-property-footer,
+  .rent-property-footer {
     align-items: stretch;
     flex-direction: column;
   }
 
-  .sale-property-details-button {
+  .sale-property-details-button,
+  .rent-property-details-button {
     width: 100%;
   }
 
-  .sale-pagination {
+  .sale-pagination,
+  .rent-pagination {
     gap: 5px;
   }
 
   .sale-pagination-number,
-  .sale-pagination-arrow {
+  .sale-pagination-arrow,
+  .rent-pagination-number,
+  .rent-pagination-arrow {
     width: 34px;
     height: 34px;
   }
-
 }
-

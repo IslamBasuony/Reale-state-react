@@ -27,6 +27,8 @@
   border-radius: 15px;
   overflow: hidden;
   position: relative;
+  display: block;
+  text-decoration: none;
 }
 
 .image-wrapper {
@@ -98,7 +100,7 @@
   margin-bottom: 15px;
 }
 
-.card-content button {
+.card-content .explore-area-btn {
   background: var(--black);
   color: var(--white);
   padding: 8px 18px;
@@ -106,9 +108,11 @@
   border-radius: 20px;
   cursor: pointer;
   font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.card-content button:hover {
+.card-content .explore-area-btn:hover {
   opacity: 0.9;
 }
 
@@ -143,6 +147,48 @@
   text-align: start;
 }
 
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.subscribe-input {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--white);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  min-width: 220px;
+  outline: none;
+}
+
+.subscribe-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.subscribe-input:focus {
+  border-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.subscribe-success {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0;
+}
+
+.subscribe-error {
+  color: #ffd9d9;
+  font-weight: 500;
+  font-size: 13px;
+  width: 100%;
+  margin: 10px 0 0;
+  text-align: center;
+}
+
 .subscribe-btn {
   background-color: transparent;
   color: var(--white);
@@ -151,11 +197,17 @@
   border-radius: 20px;
   cursor: pointer;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
-.subscribe-btn:hover {
+.subscribe-btn:hover:not(:disabled) {
   background-color: var(--white);
   color: var(--brand);
+}
+
+.subscribe-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 @media (max-width: 1200px) {
@@ -194,7 +246,7 @@
     font-size: 15px;
     width: 80%; 
   }
-  .card-content button {
+  .card-content .explore-area-btn {
     padding: 6px 15px;
     font-size: 13px;
   }
@@ -209,6 +261,15 @@
   .subscribe-text h3 {
     width: 100%; 
     text-align: center;
+  }
+  .subscribe-form {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+  .subscribe-input {
+    width: 100%;
+    min-width: 0;
   }
   .subscribe-btn {
     padding: 6px 20px;
@@ -245,7 +306,7 @@
     font-size: 14px;
     width: 85%;
   }
-  .card-content button {
+  .card-content .explore-area-btn {
     padding: 5px 12px;
     font-size: 12px;
   }
@@ -284,7 +345,7 @@
     font-size: 13px;
     width: 90%;
   }
-  .card-content button {
+  .card-content .explore-area-btn {
     padding: 4px 10px;
     font-size: 11px;
   }

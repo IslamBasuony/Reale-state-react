@@ -98,28 +98,29 @@ export default function AdminAgentForm() {
       <form className="admin-form" onSubmit={handleSubmit}>
         <div className="admin-form-grid">
           <div className="admin-form-group">
-            <label>الاسم الأول *</label>
-            <input type="text" value={form.first_name} onChange={set("first_name")} required maxLength={50} />
+            <label htmlFor="aaf-first-name">الاسم الأول *</label>
+            <input id="aaf-first-name" type="text" value={form.first_name} onChange={set("first_name")} required maxLength={50} />
           </div>
 
           <div className="admin-form-group">
-            <label>الاسم الأخير *</label>
-            <input type="text" value={form.last_name} onChange={set("last_name")} required maxLength={50} />
+            <label htmlFor="aaf-last-name">الاسم الأخير *</label>
+            <input id="aaf-last-name" type="text" value={form.last_name} onChange={set("last_name")} required maxLength={50} />
           </div>
 
           <div className="admin-form-group">
-            <label>البريد الإلكتروني *</label>
-            <input type="email" value={form.email} onChange={set("email")} required />
+            <label htmlFor="aaf-email">البريد الإلكتروني *</label>
+            <input id="aaf-email" type="email" value={form.email} onChange={set("email")} required />
           </div>
 
           <div className="admin-form-group">
-            <label>الهاتف *</label>
-            <input type="text" value={form.phone} onChange={set("phone")} required />
+            <label htmlFor="aaf-phone">الهاتف *</label>
+            <input id="aaf-phone" type="text" value={form.phone} onChange={set("phone")} required />
           </div>
 
           <div className="admin-form-group">
-            <label>{isEdit ? "كلمة المرور الجديدة (اتركها فارغة للإبقاء)" : "كلمة المرور *}"}  </label>
+            <label htmlFor="aaf-password">{isEdit ? "كلمة المرور الجديدة (اتركها فارغة للإبقاء)" : "كلمة المرور *}"}  </label>
             <input
+              id="aaf-password"
               type="password"
               value={form.password}
               onChange={set("password")}
@@ -136,13 +137,13 @@ export default function AdminAgentForm() {
           </div>
 
           <div className="admin-form-group admin-form-group--full">
-            <label>رابط صورة الملف الشخصي</label>
-            <input type="url" value={form.profile_image_url} onChange={set("profile_image_url")} placeholder="https://..." />
+            <label htmlFor="aaf-profile-image-url">رابط صورة الملف الشخصي</label>
+            <input id="aaf-profile-image-url" type="url" value={form.profile_image_url} onChange={set("profile_image_url")} placeholder="https://..." />
           </div>
 
           <div className="admin-form-group admin-form-group--full">
-            <label>نبذة تعريفية</label>
-            <textarea value={form.bio} onChange={set("bio")} rows={3} />
+            <label htmlFor="aaf-bio">نبذة تعريفية</label>
+            <textarea id="aaf-bio" value={form.bio} onChange={set("bio")} rows={3} />
           </div>
         </div>
 

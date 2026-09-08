@@ -7,7 +7,6 @@ jest.mock("./api/api.js", () => ({
   getSimilarListings: jest.fn().mockResolvedValue([]),
   getListing: jest.fn().mockResolvedValue(null),
   getBrokers: jest.fn().mockResolvedValue([]),
-  getBroker: jest.fn().mockResolvedValue(null),
   subscribeNewsletter: jest.fn().mockResolvedValue({}),
   submitContact: jest.fn().mockResolvedValue({}),
 }));

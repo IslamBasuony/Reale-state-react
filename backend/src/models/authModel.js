@@ -1,7 +1,7 @@
-import bcrypt from "bcrypt";
 import { AppError } from "../utils/customErrors.js";
 
 import { executeQuery } from "../utils/dbHelpers.js";
+import { hashPassword } from "../utils/password.js";
 
 async function registerModel({ firstName, lastName, phone, email, password }) {
   try {
@@ -47,9 +47,4 @@ async function registerModel({ firstName, lastName, phone, email, password }) {
   }
 }
 
-async function hashPassword(password) {
-  const saltRounds = 10;
-  const hash = await bcrypt.hash(password, saltRounds);
-  return hash;
-}
 export default { registerModel };

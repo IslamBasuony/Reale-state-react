@@ -4,6 +4,7 @@ import "../styles/realestate.css";
 import { getBrokers, getListings } from "../api/api";
 import PropertyCard from "../components/PropertyCard";
 import StateNotice from "../components/StateNotice";
+import SEO from "../components/SEO.jsx";
 
 export default function AgentDetails() {
   const { id } = useParams();
@@ -89,6 +90,13 @@ export default function AgentDetails() {
 
   return (
     <div className="re-scope agent-details-page">
+      <SEO
+        title={`${agent.first_name} ${agent.last_name} — وسيط عقارات`}
+        description={
+          agent.bio ||
+          `صفحة الوسيط العقاري ${agent.first_name} ${agent.last_name} — تصفح عقاراته المتاحة للبيع والإيجار.`
+        }
+      />
       <section className="agent-profile-card">
         <div className="container">
           <div className="agent-profile-inner">

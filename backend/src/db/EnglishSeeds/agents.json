@@ -7,7 +7,7 @@
 
     "password": "0923lkldspp3$%#39;ld0-2",
     "bio": "Expert in luxury properties with 15 years of experience in high-end real estate",
-    "profile_image_url": "https://example.com/images/sarah-mitchell.jpg",
+    "profile_image_url": "https://randomuser.me/api/portraits/women/90.jpg",
     "is_active": true
   },
   {
@@ -18,7 +18,7 @@
     "password": "0923lkldspp3$%#39;ld0-2",
 
     "bio": "Specializes in commercial properties and investment opportunities",
-    "profile_image_url": "https://example.com/images/james-rodriguez.jpg",
+    "profile_image_url": "https://randomuser.me/api/portraits/men/52.jpg",
     "is_active": true
   },
   {
@@ -29,7 +29,7 @@
     "password": "0923lkldspp3$%#39;ld0-2",
 
     "bio": "Focused on residential properties and first-time homebuyers",
-    "profile_image_url": "https://example.com/images/emily-chen.jpg",
+    "profile_image_url": "https://randomuser.me/api/portraits/women/33.jpg",
     "is_active": true
   },
   {
@@ -40,7 +40,7 @@
     "password": "0923lkldspp3$%#39;ld0-2",
 
     "bio": "Veteran agent with expertise in property development and renovations",
-    "profile_image_url": "https://example.com/images/michael-thompson.jpg",
+    "profile_image_url": "https://randomuser.me/api/portraits/men/11.jpg",
     "is_active": false
   },
   {
@@ -51,7 +51,7 @@
     "password": "0923lkldspp3$%#39;ld0-2",
 
     "bio": "Specialist in waterfront and premium residential estates",
-    "profile_image_url": "https://example.com/images/lisa-anderson.jpg",
+    "profile_image_url": "https://randomuser.me/api/portraits/women/24.jpg",
     "is_active": true
   }
 ]

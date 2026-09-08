@@ -1,56 +1,25 @@
 import { executeQuery } from "../utils/dbHelpers.js";
 import { AppError } from "../utils/customErrors.js";
+import { hashPassword } from "../utils/password.js";
 import pool from "../db/pool.js";
 import bcrypt from "bcrypt";
-
-const SALT_ROUNDS = 10;
 
 // ─── Statistics ────────────────────────────────────────────────────────
 
 const getStats = async () => {
-  const [
-    propertiesResult,
-    clientsResult,
-    agentsResult,
-    newsletterResult,
-    contactsResult,
-    inquiriesResult,
-    recentPropertiesResult,
-    recentUsersResult,
-  ] = await Promise.all([
+  const [countsResult, recentPropertiesResult, recentUsersResult] = await Promise.all([
     executeQuery(
       `SELECT
-         COUNT(*)                                         AS total,
-         COUNT(*) FILTER (WHERE purpose = 'sale')         AS sale_count,
-         COUNT(*) FILTER (WHERE purpose = 'rent')         AS rent_count
-       FROM properties`,
+         (SELECT COUNT(*) FROM properties)                                   AS total_properties,
+         (SELECT COUNT(*) FROM properties WHERE purpose = 'sale')           AS sale_properties,
+         (SELECT COUNT(*) FROM properties WHERE purpose = 'rent')           AS rent_properties,
+         (SELECT COUNT(*) FROM clients)                                      AS total_clients,
+         (SELECT COUNT(*) FROM agents)                                       AS total_agents,
+         (SELECT COUNT(*) FROM newsletter_subscribers WHERE is_active = TRUE) AS total_subscribers,
+         (SELECT COUNT(*) FROM contact_messages)                             AS total_contacts,
+         (SELECT COUNT(*) FROM project_inquiries)                            AS total_inquiries`,
       [],
-      "admin stats: properties"
-    ),
-    executeQuery(
-      `SELECT COUNT(*) AS total FROM clients`,
-      [],
-      "admin stats: clients"
-    ),
-    executeQuery(
-      `SELECT COUNT(*) AS total FROM agents`,
-      [],
-      "admin stats: agents"
-    ),
-    executeQuery(
-      `SELECT COUNT(*) AS total FROM newsletter_subscribers WHERE is_active = TRUE`,
-      [],
-      "admin stats: newsletter"
-    ),
-    executeQuery(
-      `SELECT COUNT(*) AS total FROM contact_messages`,
-      [],
-      "admin stats: contacts"
-    ),
-    executeQuery(
-      `SELECT COUNT(*) AS total FROM project_inquiries`,
-      [],
-      "admin stats: inquiries"
+      "admin stats: counts"
     ),
     executeQuery(
       `SELECT p.id, p.title, p.price, p.status, p.purpose, p.type,
@@ -73,15 +42,17 @@ const getStats = async () => {
     ),
   ]);
 
+  const c = countsResult.rows[0];
+
   return {
-    totalProperties: Number(propertiesResult.rows[0].total),
-    saleProperties: Number(propertiesResult.rows[0].sale_count),
-    rentProperties: Number(propertiesResult.rows[0].rent_count),
-    totalClients: Number(clientsResult.rows[0].total),
-    totalAgents: Number(agentsResult.rows[0].total),
-    totalSubscribers: Number(newsletterResult.rows[0].total),
-    totalInquiries: Number(inquiriesResult.rows[0].total),
-    totalContacts: Number(contactsResult.rows[0].total),
+    totalProperties: Number(c.total_properties),
+    saleProperties: Number(c.sale_properties),
+    rentProperties: Number(c.rent_properties),
+    totalClients: Number(c.total_clients),
+    totalAgents: Number(c.total_agents),
+    totalSubscribers: Number(c.total_subscribers),
+    totalInquiries: Number(c.total_inquiries),
+    totalContacts: Number(c.total_contacts),
     recentProperties: recentPropertiesResult.rows,
     recentUsers: recentUsersResult.rows,
   };
@@ -757,7 +728,7 @@ const findAgentById = async (id) => {
 };
 
 const createAgent = async (data) => {
-  const hashedPassword = await bcrypt.hash(data.password, SALT_ROUNDS);
+  const hashedPassword = await hashPassword(data.password);
   const result = await executeQuery(
     `INSERT INTO agents (first_name, last_name, phone, email, password, bio, profile_image_url, is_active)
      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
@@ -795,7 +766,7 @@ const updateAgent = async (id, data) => {
   }
 
   if (data.password) {
-    const hashed = await bcrypt.hash(data.password, SALT_ROUNDS);
+    const hashed = await hashPassword(data.password);
     fields.push(`password = $${idx++}`);
     values.push(hashed);
   }
@@ -961,7 +932,7 @@ const changeAdminPassword = async (userId, currentPassword, newPassword) => {
   const valid = await bcrypt.compare(currentPassword, user.password);
   if (!valid) return { error: "كلمة المرور الحالية غير صحيحة" };
 
-  const hashed = await bcrypt.hash(newPassword, SALT_ROUNDS);
+  const hashed = await hashPassword(newPassword);
   await executeQuery(
     `UPDATE clients SET password = $1 WHERE id = $2`,
     [hashed, userId],

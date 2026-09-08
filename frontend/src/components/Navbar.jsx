@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import "./Navbar.css";
 import { useAuth } from "../context/AuthContext";
 import { useFavorites } from "../context/FavoritesContext";
@@ -131,16 +129,19 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="tablet-slider">
-            <Swiper spaceBetween={10} slidesPerView="auto">
+          <div className="tablet-slider" role="navigation" aria-label="روابط التنقل">
+            <ul className="tablet-links">
               {navLinks.map((link) => (
-                <SwiperSlide key={link.path} className="slide-wrapper">
-                  <Link to={link.path} className="slide-link">
+                <li key={link.path}>
+                  <NavLink
+                    to={link.path}
+                    end={link.path === "/"}
+                    className="slide-link">
                     {link.label}
-                  </Link>
-                </SwiperSlide>
+                  </NavLink>
+                </li>
               ))}
-            </Swiper>
+            </ul>
           </div>
 
           <div className="mobile-container" ref={mobileMenuRef}>

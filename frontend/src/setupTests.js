@@ -4,9 +4,9 @@
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
 
-// ---- jsdom polyfills required by Swiper / browser APIs ----
+// ---- jsdom polyfills for browser APIs ----
 
-// ResizeObserver is used by Swiper; jsdom doesn't implement it.
+// ResizeObserver is not implemented by jsdom.
 class ResizeObserverMock {
   observe() {}
   unobserve() {}

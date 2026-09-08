@@ -4,6 +4,7 @@ import "../styles/realestate.css";
 import { getProjectById } from "../data/projects";
 import { formatPrice } from "../utils/formatPrice";
 import { submitProjectInquiry } from "../api/api";
+import SEO from "../components/SEO.jsx";
 
 export default function ProjectDetails() {
   const { id } = useParams();
@@ -31,6 +32,10 @@ export default function ProjectDetails() {
 
   return (
     <div className="re-scope project-details-page">
+      <SEO
+        title={`${project.title} — عقار ويب`}
+        description={`تعرف على مشروع ${project.title} في ${project.location} بالتفصيل — الموقع، المطور، الأسعار والفئات المتاحة.`}
+      />
       <section className="project-details-hero">
         <div className="container">
           <Link to="/projects" className="project-back-link">

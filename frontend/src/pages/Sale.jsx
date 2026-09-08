@@ -1,43 +1,14 @@
 import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import "./Sale.css";
-import { subscribeNewsletter } from "../api/api";
-import { normalizeListings } from "../api/normalize";
-import fallbackProperties from "../data/fallbackProperties";
+import "../styles/listing-page.css";
 import { useFavorites } from "../context/FavoritesContext";
 import { useListings } from "../context/ListingsContext";
+import { FALLBACK_LISTINGS } from "../data/fallbackListings";
+import useNewsletter from "../hooks/useNewsletter";
+import { formatPrice, getPriceRange } from "../utils/priceRange";
 import SEO from "../components/SEO.jsx";
 
 const PAGE_SIZE = 9;
-
-const FALLBACK_LISTINGS = normalizeListings(fallbackProperties);
-
-/* =========================================
-   Helpers
-========================================= */
-
-const getPriceRange = (value) => {
-  if (value === "حتى مليون جنيه") {
-    return { min: "", max: "1000000" };
-  }
-  if (value === "1 – 2 مليون جنيه") {
-    return { min: "1000000", max: "2000000" };
-  }
-  if (value === "أكتر من 2 مليون جنيه") {
-    return { min: "2000000", max: "" };
-  }
-  return { min: "", max: "" };
-};
-
-function formatPrice(value, currency = "EGP") {
-  const number = Number(value);
-
-  if (!Number.isFinite(number)) {
-    return "غير محدد";
-  }
-
-  return `${number.toLocaleString("en-US")} ${currency}`;
-}
 
 /* =========================================
    Icons
@@ -167,9 +138,7 @@ export default function Sale() {
   }));
 
   const { listings: contextListings, error: listingsError, refetch } = useListings();
-  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
-  const [newsletterError, setNewsletterError] = useState("");
-  const [newsletterSubmitting, setNewsletterSubmitting] = useState(false);
+  const newsletter = useNewsletter();
 
   const listings = contextListings;
   const loadError = listingsError;
@@ -609,7 +578,7 @@ export default function Sale() {
               }`}
               onClick={() => handleTypeSelect(type.id)}
             >
-              {type.icon && <i className={`bi ${type.icon}`} style={{ marginLeft: 4 }} />}
+              {type.icon && <i className={`bi ${type.icon}`} />}
               {type.label}
             </button>
           ))}
@@ -988,29 +957,14 @@ export default function Sale() {
             العروض والمشاريع الحصرية أولًا بأول
           </p>
 
-          {newsletterSubmitted ? (
+          {newsletter.submitted ? (
             <p className="sale-newsletter-form" role="status" aria-live="polite">
               شكراً لك! تم الاشتراك بنجاح.
             </p>
           ) : (
           <form
             className="sale-newsletter-form"
-            onSubmit={async (event) => {
-              event.preventDefault();
-              setNewsletterError("");
-              const emailInput = event.target.elements["sale-newsletter-email"];
-              const email = emailInput?.value;
-              if (!email) return;
-              setNewsletterSubmitting(true);
-              try {
-                await subscribeNewsletter(email);
-                setNewsletterSubmitted(true);
-              } catch {
-                setNewsletterError("تعذر الاشتراك. تحقق من البريد الإلكتروني وحاول مرة أخرى.");
-              } finally {
-                setNewsletterSubmitting(false);
-              }
-            }}
+            onSubmit={(event) => newsletter.handleSubmit(event, "sale-newsletter-email")}
           >
 
             <input
@@ -1020,11 +974,11 @@ export default function Sale() {
               required
             />
 
-            <button type="submit" disabled={newsletterSubmitting}>
-              {newsletterSubmitting ? "جارٍ..." : "اشترك الآن"}
+            <button type="submit" disabled={newsletter.submitting}>
+              {newsletter.submitting ? "جارٍ..." : "اشترك الآن"}
             </button>
 
-            {newsletterError && <p className="re-notice re-notice-error" role="alert">{newsletterError}</p>}
+            {newsletter.error && <p className="re-notice re-notice-error" role="alert">{newsletter.error}</p>}
           </form>
           )}
 

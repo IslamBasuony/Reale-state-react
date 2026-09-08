@@ -93,10 +93,19 @@
   display: none;
   flex: 1 1 auto;
   margin: 0 1rem;
-  overflow: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
-.slide-wrapper {
-  width: auto;
+.tablet-slider::-webkit-scrollbar {
+  display: none;
+}
+.tablet-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+  width: max-content;
 }
 .slide-link {
   display: inline-block;
@@ -107,9 +116,13 @@
   font-weight: 700;
   white-space: nowrap;
   text-align: center;
+  transition: transform 0.15s ease;
 }
 .slide-link:hover {
   transform: scale(1.03);
+}
+.slide-link.active {
+  background: var(--black);
 }
 
 .mobile-container {

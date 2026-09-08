@@ -91,23 +91,23 @@ export default function AdminClientDetail() {
       <form className="admin-form" onSubmit={handleSubmit}>
         <div className="admin-form-grid">
           <div className="admin-form-group">
-            <label>الاسم الأول *</label>
-            <input type="text" value={form.first_name} onChange={set("first_name")} required />
+            <label htmlFor="acd-first-name">الاسم الأول *</label>
+            <input id="acd-first-name" type="text" value={form.first_name} onChange={set("first_name")} required />
           </div>
 
           <div className="admin-form-group">
-            <label>الاسم الأخير *</label>
-            <input type="text" value={form.last_name} onChange={set("last_name")} required />
+            <label htmlFor="acd-last-name">الاسم الأخير *</label>
+            <input id="acd-last-name" type="text" value={form.last_name} onChange={set("last_name")} required />
           </div>
 
           <div className="admin-form-group">
-            <label>البريد الإلكتروني *</label>
-            <input type="email" value={form.email} onChange={set("email")} required />
+            <label htmlFor="acd-email">البريد الإلكتروني *</label>
+            <input id="acd-email" type="email" value={form.email} onChange={set("email")} required />
           </div>
 
           <div className="admin-form-group">
-            <label>الهاتف</label>
-            <input type="text" value={form.phone} onChange={set("phone")} />
+            <label htmlFor="acd-phone">الهاتف</label>
+            <input id="acd-phone" type="text" value={form.phone} onChange={set("phone")} />
           </div>
 
           <div className="admin-form-group">

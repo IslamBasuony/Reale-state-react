@@ -1,4 +1,16 @@
 
+/* ============================================================================
+   RE-ESTATE scoped design system
+   ----------------------------------------------------------------------------
+   This stylesheet defines the scoped `.re-scope` system with its own `--re-*`
+   tokens. It is intentionally LTR/self-contained (Poppins/Inter) and is used by
+   a set of marketing pages (Home, SearchResults, AreaDetails, ...).
+
+   It coexists with—and does NOT replace—the global RTL tokens in src/index.css
+   (`--brand`, `--white`, ...) which drive the Arabic UI and src/styles/pages-common.css.
+   Do not merge the two systems; they target different page layouts.
+============================================================================ */
+
 :root {
   --re-primary: #2fa593;
   --re-primary-dark: #22806f;

@@ -821,4 +821,5 @@ if (isDirectRun) {
   seed();
 }
 
+export { initDB, closeDB, seedData };
 export default { seed };

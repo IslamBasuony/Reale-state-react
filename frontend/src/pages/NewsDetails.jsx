@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import "../styles/realestate.css";
 import { getNewsById, default as newsList } from "../data/news";
 import { formatDate } from "../utils/formatPrice";
+import SEO from "../components/SEO.jsx";
 
 export default function NewsDetails() {
   const { id } = useParams();
@@ -28,6 +29,12 @@ export default function NewsDetails() {
 
   return (
     <div className="re-scope news-details-page">
+      <SEO
+        title={article.title}
+        description={article.summary}
+        image={article.image}
+        type="article"
+      />
       <article className="container news-article">
         <header className="news-article-header">
           <Link to="/news" className="project-back-link">

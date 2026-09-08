@@ -1,4 +1,5 @@
 import express from "express";
+import compression from "compression";
 import session from "express-session";
 import connectPgSimple from "connect-pg-simple";
 import helmet from "helmet";
@@ -9,6 +10,7 @@ import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 dotenv.config();
 import pool from "./src/db/pool.js";
+import { JSON_BODY_LIMIT, SESSION_MAX_AGE_MS } from "./src/utils/constants.js";
 import { errorHandler } from "./src/middlewares/errorHandler.js";
 
 import authRouter from "./src/routes/authRouter.js";
@@ -35,14 +37,20 @@ if (process.env.NODE_ENV === "production") {
   app.set("trust proxy", 1);
 }
 
+// Public liveness probe — no secrets, no stack traces
+app.get("/health", (req, res) => {
+  res.status(200).json({ success: true, status: "ok" });
+});
+
 const PgStore = connectPgSimple(session);
 const sessionStore = new PgStore({
   pool: pool,
   tableName: "sessions",
   createTableIfMissing: false,
 });
-app.use(express.json({ limit: "1mb" }));
-app.use(express.urlencoded({ extended: true, limit: "1mb" }));
+app.use(express.json({ limit: JSON_BODY_LIMIT }));
+app.use(express.urlencoded({ extended: true, limit: JSON_BODY_LIMIT }));
+app.use(compression());
 app.use(
   cors({
     origin: process.env.CLIENT_URL || "http://localhost:3000",
@@ -58,7 +66,7 @@ app.use(
     store: sessionStore,
     cookie: {
       secure: process.env.NODE_ENV === "production",
-      maxAge: 1000 * 60 * 60 * 24,
+      maxAge: SESSION_MAX_AGE_MS,
       httpOnly: true,
       sameSite: "strict",
     },
@@ -78,6 +86,38 @@ app.use("/api/projects/:id/inquiries", apiLimiter, inquiriesRouter);
 app.use("/auth", authLimiter, authRouter);
 app.use("/auth", passwordResetLimiter, passwordResetRouter);
 app.use("/api/admin", apiLimiter, adminRouter);
+
+if (process.env.NODE_ENV === "production") {
+  // Same-origin deployment: serve the built React SPA from Express.
+  // Frontend and API share one origin so session cookies (SameSite=strict,
+  // Secure) and the relative /api and /auth routes work without a reverse proxy.
+  const frontendBuild = path.join(__dirname, "../frontend/build");
+
+  // API/auth paths that did not match a route respond as JSON, never SPA HTML.
+  app.use(["/api", "/auth"], (req, res) => {
+    res.status(404).json({
+      success: false,
+      error: { message: "Not found", code: "NOT_FOUND" },
+    });
+  });
+
+  app.use(express.static(frontendBuild));
+
+  // React Router history fallback for non-API GET requests.
+  app.use((req, res, next) => {
+    if (req.method !== "GET") {
+      return next();
+    }
+    if (
+      req.path.startsWith("/api/") ||
+      req.path.startsWith("/uploads/") ||
+      req.path === "/api"
+    ) {
+      return next();
+    }
+    res.sendFile(path.join(frontendBuild, "index.html"));
+  });
+}
 
 app.use(errorHandler);
 

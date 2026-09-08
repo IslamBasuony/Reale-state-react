@@ -4,29 +4,13 @@ import { getListing, getSimilarListings } from "../api/api.js";
 import { normalizeProperty } from "../api/normalize.js";
 import fallbackProperty from "../data/fallbackProperty.js";
 import PropertyCard from "../components/PropertyCard.jsx";
-import { purposeLabel } from "../utils/formatPrice.js";
+import { purposeLabel, formatPrice } from "../utils/formatPrice.js";
 import { useFavorites } from "../context/FavoritesContext";
 import "../components/PropertyDetails.css";
 import SEO from "../components/SEO.jsx";
 
 const FALLBACK_IMAGE = "/images/house.jpg";
 const FALLBACK_PROPERTY = normalizeProperty(fallbackProperty);
-
-const formatPrice = (property) => {
-  const value = property && property.price;
-  if (typeof value !== "number") {
-    return String(value ?? "");
-  }
-  const currency = property.currency || "EGP";
-  const base = `${value.toLocaleString("en-US")} ${currency}`;
-  if (property.price_period === "monthly") {
-    return `${base} / شهريًا`;
-  }
-  if (property.price_period === "yearly") {
-    return `${base} / سنويًا`;
-  }
-  return base;
-};
 
 const digitsOnly = (value) => String(value ?? "").replace(/\D/g, "");
 
@@ -228,7 +212,11 @@ export default function PropertyDetails() {
         </p>
         <div className="property-header-actions">
           <p className="main-price">
-            {formatPrice(property)}
+            {formatPrice(property?.price, property.currency || "EGP", {
+              monthly: property?.price_period === "monthly",
+              yearly: property?.price_period === "yearly",
+              fallback: "",
+            })}
           </p>
           <button
             type="button"

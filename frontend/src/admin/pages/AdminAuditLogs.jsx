@@ -148,6 +148,7 @@ export default function AdminAuditLogs() {
           <input
             type="text"
             placeholder="بحث في الوصف أو البريد الإلكتروني..."
+            aria-label="بحث في سجل النشاط"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
           />
@@ -172,13 +173,13 @@ export default function AdminAuditLogs() {
           </select>
 
           <div className="admin-audit-date-group">
-            <label>من</label>
-            <input type="date" value={startDate} onChange={(e) => { setStartDate(e.target.value); setPage(1); }} />
+            <label htmlFor="adl-start">من</label>
+            <input id="adl-start" type="date" value={startDate} onChange={(e) => { setStartDate(e.target.value); setPage(1); }} />
           </div>
 
           <div className="admin-audit-date-group">
-            <label>إلى</label>
-            <input type="date" value={endDate} onChange={(e) => { setEndDate(e.target.value); setPage(1); }} />
+            <label htmlFor="adl-end">إلى</label>
+            <input id="adl-end" type="date" value={endDate} onChange={(e) => { setEndDate(e.target.value); setPage(1); }} />
           </div>
         </div>
       </div>

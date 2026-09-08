@@ -11,6 +11,7 @@ export const ListingsProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const fetchedAt = useRef(0);
   const loadingRef = useRef(false);
+  const abortRef = useRef(null);
 
   useEffect(() => {
     if (listings && Date.now() - fetchedAt.current < STALE_MS) return;
@@ -18,12 +19,14 @@ export const ListingsProvider = ({ children }) => {
     loadingRef.current = true;
     setLoading(true);
     setError(false);
-    getListings()
+    abortRef.current = new AbortController();
+    getListings({ signal: abortRef.current.signal })
       .then((data) => {
         setListings(data);
         fetchedAt.current = Date.now();
       })
-      .catch(() => {
+      .catch((err) => {
+        if (err && err.name === "AbortError") return;
         setError(true);
       })
       .finally(() => {
@@ -39,18 +42,25 @@ export const ListingsProvider = ({ children }) => {
     setLoading(true);
     setError(false);
     loadingRef.current = true;
-    getListings()
+    abortRef.current?.abort();
+    abortRef.current = new AbortController();
+    getListings({ signal: abortRef.current.signal })
       .then((data) => {
         setListings(data);
         fetchedAt.current = Date.now();
       })
-      .catch(() => {
+      .catch((err) => {
+        if (err && err.name === "AbortError") return;
         setError(true);
       })
       .finally(() => {
         loadingRef.current = false;
         setLoading(false);
       });
+  }, []);
+
+  useEffect(() => {
+    return () => abortRef.current?.abort();
   }, []);
 
   const value = React.useMemo(

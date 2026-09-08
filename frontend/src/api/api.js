@@ -52,8 +52,8 @@ export const fetchFromApi = async (endpoint, options = {}) => {
   return body && typeof body === "object" && body.success ? body.data : body;
 };
 
-export const getListings = async () => {
-  const data = await fetchFromApi(`${API_BASE_URL}/${getLang()}/listings`);
+export const getListings = async (options = {}) => {
+  const data = await fetchFromApi(`${API_BASE_URL}/${getLang()}/listings`, options);
   return normalizeListings(data);
 };
 
@@ -79,10 +79,6 @@ export const getListing = async (id) => {
 export const getBrokers = async () => {
   const data = await fetchFromApi(`${API_BASE_URL}/brokers`);
   return Array.isArray(data) ? data : [];
-};
-
-export const getBroker = async (id) => {
-  return fetchFromApi(`${API_BASE_URL}/brokers/${encodeURIComponent(id)}`);
 };
 
 // ---------------------------------------------------------------------------

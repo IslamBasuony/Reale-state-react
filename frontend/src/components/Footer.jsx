@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import { subscribeNewsletter } from "../api/api";
+import useNewsletter from "../hooks/useNewsletter";
 
 const popularAreas = [
   { label: "وسط البلد", location: "وسط البلد" },
@@ -11,31 +11,10 @@ const popularAreas = [
 ];
 
 const Footer = () => {
-  const [subscribed, setSubscribed] = useState(false);
-  const [subscribeError, setSubscribeError] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleSubscribe = async (event) => {
-    event.preventDefault();
-    setSubscribeError("");
-    const form = event.target;
-    const emailInput = form.elements["footer-newsletter-email"];
-    const email = emailInput?.value;
-    if (!email) return;
-
-    setSubmitting(true);
-    try {
-      await subscribeNewsletter(email);
-      setSubscribed(true);
-    } catch (err) {
-      setSubscribeError("تعذر الاشتراك. تحقق من البريد الإلكتروني وحاول مرة أخرى.");
-    } finally {
-      setSubmitting(false);
-    }
-  };
+  const newsletter = useNewsletter();
 
   const handleEmailChange = () => {
-    if (subscribed) setSubscribed(false);
+    if (newsletter.submitted) newsletter.reset();
   };
 
   return (
@@ -48,14 +27,14 @@ const Footer = () => {
               احصل على أحدث العروض وخطط السوق والعروض الحصرية عبر بريدك الإلكتروني
             </p>
           </div>
-          {subscribed ? (
+          {newsletter.submitted ? (
             <p className="footerSection-subscribe-success" role="status" aria-live="polite">
               شكراً لك! تم الاشتراك بنجاح.
             </p>
           ) : (
             <form
               className="footerSection-subscribe-form"
-              onSubmit={handleSubscribe}
+              onSubmit={(event) => newsletter.handleSubmit(event, "footer-newsletter-email")}
             >
               <input
                 type="email"
@@ -66,10 +45,10 @@ const Footer = () => {
                 required
                 onChange={handleEmailChange}
               />
-              <button type="submit" className="footerSection-btn" disabled={submitting}>
-                {submitting ? "جارٍ..." : "اشترك الآن"}
+              <button type="submit" className="footerSection-btn" disabled={newsletter.submitting}>
+                {newsletter.submitting ? "جارٍ..." : "اشترك الآن"}
               </button>
-              {subscribeError && <p className="re-notice re-notice-error" role="alert">{subscribeError}</p>}
+              {newsletter.error && <p className="re-notice re-notice-error" role="alert">{newsletter.error}</p>}
             </form>
           )}
         </div>
