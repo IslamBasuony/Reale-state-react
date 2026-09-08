@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../styles/realestate.css";
 import { getBrokers, getListings } from "../api/api";
+import { FALLBACK_AGENTS } from "../data/agents";
 import PropertyCard from "../components/PropertyCard";
 import StateNotice from "../components/StateNotice";
 import SEO from "../components/SEO.jsx";
@@ -46,7 +47,7 @@ export default function AgentDetails() {
   const loading =
     (brokers === null && !brokersError) || (listings === null && !listingsError);
 
-  const sourceBrokers = brokersError ? [] : brokers ?? [];
+  const sourceBrokers = brokersError ? FALLBACK_AGENTS : brokers ?? [];
   const sourceListings = listings ?? [];
 
   const agent =

@@ -46,7 +46,13 @@ export const fetchFromApi = async (endpoint, options = {}) => {
         body.errors[0].msg) ||
       (body && body.message) ||
       `API request failed: ${res.status} ${res.statusText}`;
-    throw new Error(message);
+    const error = new Error(message);
+    error.status = res.status;
+    // JSON body = a real backend response (e.g. a genuine 404 "not found");
+    // null body (HTML / non-JSON) = host-level miss (Netlify 404 for a missing
+    // /api route) which the pages must treat as "backend unavailable".
+    error.isJsonBody = body !== null;
+    throw error;
   }
 
   return body && typeof body === "object" && body.success ? body.data : body;

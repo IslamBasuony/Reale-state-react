@@ -80,7 +80,13 @@ export default function PropertyDetails() {
         setState("ready");
       } catch (error) {
         if (cancelled) return;
-        if (String(error?.message ?? "").includes("404")) {
+        // A genuine backend "not found" comes back as a 404 with a JSON body.
+        // A host-level 404 for a missing /api route (e.g. Netlify static with
+        // no backend) returns non-JSON (HTML), so fall back to demo data
+        // instead of showing "property not found".
+        const realBackendNotFound =
+          error && error.status === 404 && error.isJsonBody === true;
+        if (realBackendNotFound) {
           setState("notFound");
           setProperty(null);
         } else {

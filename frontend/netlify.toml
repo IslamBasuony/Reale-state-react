@@ -1,0 +1,7 @@
+# Netlify deployment settings for the AqarWeb frontend (HR Demo / static).
+# Redirect rules live in public/_redirects so they are copied verbatim into the
+# publish directory; nothing else is configured here.
+[build]
+  base = "frontend"
+  command = "npm ci && npm run build"
+  publish = "build"

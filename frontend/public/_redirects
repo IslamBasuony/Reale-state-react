@@ -1,0 +1,9 @@
+# Netlify SPA fallback + API guard for the AqarWeb static frontend.
+#
+# React Router (BrowserRouter) routes must resolve to index.html (200).
+# /api/* and /auth/* must NOT resolve to index.html with 200 — they return a
+# 404 (with index.html as the body) so the frontend's fetch() sees a failure
+# and the built-in static/demo fallback data engages correctly.
+/api/*   /index.html  404
+/auth/*  /index.html  404
+/*       /index.html  200
