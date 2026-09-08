@@ -282,8 +282,8 @@ One Node/Express instance serves both the API and the built React SPA on a singl
 
 ### Recommended hosts
 
-- **App (Node/Express + SPA):** one persistent web service (e.g. Render Web Service, Railway, Fly.io) — not serverless, because the backend uses long-lived sessions and disk uploads.
-- **Database:** a managed PostgreSQL the app can reach directly (e.g. Render Postgres, Neon, Supabase) — set `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` (production DB config enables SSL automatically).
+- **App (Node/Express + SPA):** one persistent web service (Render Web Service `reale-state` via `render.yaml`). Not serverless, because the backend uses long-lived sessions and disk uploads. The Blueprint creates **only** the web service — it does not create a database.
+- **Database:** external **Supabase free PostgreSQL**. Copy the five values from Supabase → Project Settings → Database → Connection string into `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`. The production DB config enables SSL automatically (`rejectUnauthorized: false`), which satisfies Supabase's SSL requirement. There is **no `DATABASE_URL` support** — use the five `DB_*` variables. After applying `render.yaml`, fill these keys (declared with `sync: false`) in the service's Environment tab on Render.
 
 ### Required production environment variables
 
@@ -291,7 +291,7 @@ One Node/Express instance serves both the API and the built React SPA on a singl
 |----------|---------|
 | `NODE_ENV=production` | Secure cookies, trust-proxy, static SPA serving |
 | `PORT` | Set by the platform (Render injects it) |
-| `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` | Managed PostgreSQL credentials |
+| `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` | Supabase PostgreSQL credentials (from Supabase dashboard → Connection string) |
 | `SESSION_SECRET_KEY` | Session signing secret (server refuses to start without it) |
 | `CLIENT_URL` | The app's public HTTPS origin — used for credentialed CORS |
 
@@ -299,10 +299,15 @@ No frontend build variable is required for the same-origin deployment (`/api` an
 
 ### Provisioning the database (safe)
 
+Run it against your Supabase database. **`NODE_ENV=production` is required** so the SSL-enabled production connection config is used (the Supabase host needs SSL):
+
 ```bash
 cd backend
-npm run seed:demo
+NODE_ENV=production DB_HOST=db.<project>.supabase.co DB_PORT=5432 \
+DB_NAME=postgres DB_USER=postgres DB_PASSWORD=<password> npm run seed:demo
 ```
+
+On Render this runs automatically via the `postDeploy` hook (`npm run seed:demo`) after each deploy, with the production app environment already set.
 
 `seed:demo` is **non-destructive**: it applies `schema.sql` only if the database is empty, applies the idempotent migrations, validates all 16 tables, and seeds the Arabic/English demo data only if no properties exist yet. It never drops existing data and can be run repeatedly.
 
