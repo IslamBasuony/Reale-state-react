@@ -1,6 +1,25 @@
-# Real Estate React
+# AqarWeb — Full-Stack Real Estate Platform
 
-A full-stack real estate listing platform with an Arabic-first frontend, an admin dashboard, and a PostgreSQL-backed REST API. Two independent apps live in one repository — `backend/` (Express API) and `frontend/` (React SPA).
+> Repository: [`Reale-state-react`](https://github.com/IslamBasuony/Reale-state-react)
+
+## Overview
+
+AqarWeb is a full-stack real estate platform with an Arabic-first frontend, an admin dashboard, and a PostgreSQL-backed REST API. Two apps live in one repository — `backend/` (Express API) and `frontend/` (React SPA).
+
+## Live Demo
+
+Production deployment is configured for [Render](https://render.com) via `render.yaml` (target URL: `https://reale-state.onrender.com`). The service must be provisioned with an external Supabase PostgreSQL database before the app is publicly available. See [Deployment & Production](#deployment--production) for setup steps.
+
+## Screenshots
+
+No README screenshots are checked in yet. Recommended captures for portfolio presentation:
+
+1. Homepage (Arabic / English)
+2. Property listing with filters
+3. Property details page
+4. Login / registration
+5. Admin dashboard
+6. Mobile responsive layout
 
 ## Features
 
@@ -17,6 +36,18 @@ A full-stack real estate listing platform with an Arabic-first frontend, an admi
   - Reports and charts (bar, donut, line)
 - SEO support via `react-helmet-async` and JSON-LD
 - Server-side sessions (PostgreSQL-backed) with httpOnly + sameSite:strict cookies
+
+## Architecture
+
+```
+Browser ──▶ React SPA (frontend/)     ── fetch (credentials) ──▶ Express API (backend/)
+                                                                      │
+                                                                      ├── Passport + express-session
+                                                                      ├── REST routes (/api/*, /auth/*)
+                                                                      └── PostgreSQL (pg pool, schema + migrations)
+```
+
+In production, Express serves the built React app from `frontend/build/` on the same HTTPS origin as the API so session cookies remain same-site.
 
 ## Tech Stack
 
@@ -223,6 +254,15 @@ All API responses are wrapped as `{ success: boolean, data: any }`.
 
 ## Testing
 
+The repository includes automated tests on both sides:
+
+| Layer | Runner | Test files | Test cases (static count) |
+|-------|--------|------------|---------------------------|
+| Backend | Vitest + Supertest | 8 | 110 |
+| Frontend | Jest + React Testing Library | 9 | 87 |
+
+Re-run the counts after adding tests: `rg "^\s*(it|test)\(" backend/src/__tests__ frontend/src/__tests__ frontend/src/App.test.js`.
+
 ### Backend tests (requires running PostgreSQL)
 
 ```bash
@@ -350,6 +390,23 @@ The platform includes a full admin dashboard with:
 - Audit logs
 - Dashboard with charts (bar, donut, line)
 - Reports
+
+## Security
+
+- **Helmet** security headers on the Express app
+- **bcrypt** password hashing (10 rounds)
+- **express-validator** input validation on API routes
+- **Session fixation protection** via `req.session.regenerate` on login
+- **httpOnly** session cookies with `sameSite: strict` (and `secure` in production)
+- Server-side sessions stored in PostgreSQL (`sessions` table via `connect-pg-simple`)
+- No credentials stored in `localStorage`; the session cookie is the source of truth
+- `.env.example` documents required variables; secrets are never committed
+
+## Future Improvements
+
+- Add README screenshots for key UI flows
+- Persistent object storage for admin-uploaded property images (local disk is ephemeral on free hosting tiers)
+- GitHub Actions CI with PostgreSQL service for backend integration tests
 
 ## Notes
 
